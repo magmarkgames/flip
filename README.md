@@ -1,4 +1,4 @@
-# FLIP v0.1
+# FLIP v0.2
 
 Ein kleines Incremental Game mit einer permanenten Münze und temporären Bonusmünzen. Kein Build, keine Abhängigkeiten, kein Backend.
 
@@ -15,3 +15,6 @@ Ein kleines Incremental Game mit einer permanenten Münze und temporären Bonusm
 - Survival: Chance, dass eine Bonusmünze bei Kopf trotzdem bleibt. Streak Protection: Chance, dass die Serie bei Zahl bestehen bleibt.
 - Alle Fähigkeiten starten bei 0 %, +1 Prozentpunkt je Kauf, maximal 100 %. Startpreise 10, 40, 75 Coins; Kosten = gerundet(Startpreis × 1,2^Level). Weitere Fähigkeiten erscheinen bei 50 und 100 insgesamt verdienten Coins.
 - Der Spielstand wird lokal gespeichert; manuelle JSON-Sicherung und Import in den Einstellungen.
+
+## Update v0.2
+Die index.html im bestehenden Repository ersetzen. Speicherformat und lokaler Speicherschlüssel bleiben unverändert. Der Hauptbildschirm ist scrollbar-frei, mit vier festen Upgrade-Slots; Statistik, Einstellungen und Regeln sind über die Header-Icons erreichbar. Die Münzen zeigen ihren Basis-Ertrag (1 oder 0).
