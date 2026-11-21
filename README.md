@@ -1,3 +1,5 @@
-# FLIP v0.7
+# FLIP v0.8
 
-Räumlicher Schreibtisch mit Wand, sichtbarer Tischkante und schräger Draufsicht. Einheitliche 3D-Münzrotation. Duplication ab 6 Coins wie in v0.6. Spielstand unverändert. index.html ersetzen.
+Krone (Gewinn) und Totenkopf (kein Gewinn) auf allen Münzen. Separate Schattenebene, korrigierte Münzkante und Tischplatte bis zur Rückwand. Bestehende Spielstände bleiben kompatibel.
+
+Installation: index.html im Repository ersetzen.
