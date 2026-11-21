@@ -1,4 +1,3 @@
-# FLIP v0.6
+# FLIP v0.7
 
-- Top-down tabletop coin view with visible thickness and wider coins
-- Cheaper Duplication upgrade (base cost 6 instead of 10)
+Räumlicher Schreibtisch mit Wand, sichtbarer Tischkante und schräger Draufsicht. Einheitliche 3D-Münzrotation. Duplication ab 6 Coins wie in v0.6. Spielstand unverändert. index.html ersetzen.
