@@ -1,8 +1,5 @@
-# FLIP v0.3
+# FLIP v0.4
 
-Standalone Web-Spiel. index.html im bestehenden GitHub-Pages-Repository ersetzen. Der lokale Spielstand (flip-v0.1-save) bleibt erhalten; bisherige Bonusmünzen beginnen ihre eigene Serie bei 0.
+Einzelne index.html auf GitHub Pages ersetzen. Spielstand und Regeln aus v0.3 bleiben erhalten.
 
-- Holztisch und ausfahrbares Upgrade-Menü
-- 3D-Wurf mit Schatten, Landung und Klang (reduzierte Bewegung unterstützt)
-- Goldbonus: ab 250 insgesamt verdienten Coins, Startpreis 150, 1 Prozentpunkt je Kauf, Basiswert 5
-- Bonusmünzen: eigene Zahlserie; Kopf setzt diese auch bei Survival zurück. Hauptserie multipliziert weiterhin den gesamten Ertrag.
+Haupt- und Bonusmünzen landen an wechselnden Positionen und mit unterschiedlicher Drehung auf einem gemeinsamen Holztisch. Neue Bonusmünzen fliegen aus der Hauptmünze heraus; überlebende Münzen bleiben liegen. Bei vielen Münzen wird die sichtbare Anzahl platzabhängig begrenzt, alle Münzen zählen weiterhin. Die Animation simuliert Würfe; keine Physik-Engine.
