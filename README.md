@@ -1,5 +1,8 @@
-# FLIP v0.4
+# FLIP v0.5
 
-Einzelne index.html auf GitHub Pages ersetzen. Spielstand und Regeln aus v0.3 bleiben erhalten.
+- Jede Münze wird separat angetippt; mehrere Würfe können sich überschneiden.
+- Wurf ca. 1,8–2,15 Sekunden, mit 3D-Münzkante, Abprallen und Auspendeln.
+- Bonusmünzen erhalten bei Zahl ihren eigenen Streak und den aktuellen Hauptmultiplikator bei Landung. Kopf entfernt die Münze, sofern Survival nicht greift.
+- Alte Spielstände bleiben kompatibel. Bei zu vielen Münzen zeigt der Zähler unten weitere Münzen an.
 
-Haupt- und Bonusmünzen landen an wechselnden Positionen und mit unterschiedlicher Drehung auf einem gemeinsamen Holztisch. Neue Bonusmünzen fliegen aus der Hauptmünze heraus; überlebende Münzen bleiben liegen. Bei vielen Münzen wird die sichtbare Anzahl platzabhängig begrenzt, alle Münzen zählen weiterhin. Die Animation simuliert Würfe; keine Physik-Engine.
+Installation: index.html im bisherigen GitHub-Repository ersetzen.
