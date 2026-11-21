@@ -1,5 +1,10 @@
-# FLIP v0.10
+# FLIP v0.11 – Upgrade Tree
 
-Wische irgendwo im Spielbildschirm, um alle aktiven Münzen gleichzeitig zu werfen. Erst nach Abschluss aller Animationen (einschließlich neuer Bonusmünzen) ist der nächste Wurf möglich. Die Wischkraft beeinflusst die Flughöhe und Flugdauer. Die Ergebnisse bleiben unabhängig und fair. Neue Bonusmünzen zählen erst ab der nächsten Runde. Bestehende Spielstände bleiben kompatibel.
+`index.html` im bestehenden GitHub-Pages-Repository ersetzen. Keine zusätzlichen Dateien oder Abhängigkeiten erforderlich. Der bisherige lokale Spielstand wird übernommen.
 
-Ersetze die index.html im GitHub-Pages-Repository.
+- Vier farbige Upgrade-Pfade, verschiebbare Karte, Zoom und Detailfenster.
+- Fast Flip: 15 Level, −5 Prozentpunkte Wurfzeit pro Level, Startpreis 50 Coins, Preisfaktor 1,35.
+- Twin Spawn: maximal 25 %, ab Duplication 10 % und 750 insgesamt verdienten Coins.
+- Second Chance: maximal 20 %, ab Survival 5 % und 1.000 insgesamt verdienten Coins; ein zusätzlicher Hauptwurf.
+- Streak Skip: maximal 10 %, ab Protection 5 % und 2.500 insgesamt verdienten Coins; übersprungene Meilensteine werden ausgelöst.
+- Golden Coin: zusätzlich Fast Flip Level 3; Critical Flip: zusätzlich Golden Coin 2 %. Bereits gekaufte Upgrades bleiben freigeschaltet.
