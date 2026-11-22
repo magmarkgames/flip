@@ -1,11 +1,11 @@
-# FLIP v0.23
+# FLIP v0.24 — Magnet & neue Tischperspektive
 
-- **Alle Münzen rund halb so groß** (Kupfer, Silber, Gold); Perspektive flacher / näher an Top-View.
-- **×2-Zone vereinfacht:** goldenes „×2“ in einem goldenen gestrichelten Kreis, nur wenig größer als die Hauptmünze. Bonus nur, wenn die Hauptmünze fast vollständig hineinpasst.
-- **Trefferzähler am Tisch ausgeblendet.** Bisherige Statistiken werden nicht gelöscht.
-- **Geldmünzen einsammeln:** Einzeln antippen oder mit dem Finger über mehrere Münzen wischen. Der Schnipp auf der Hauptmünze bleibt getrennt.
-- **Rückflug-Bug behoben:** Neue Geldmünzen werden direkt am endgültigen Ort erzeugt und fallen dort herunter; sie bewegen sich beim Zurückkehren der Hauptmünze nicht mehr mit.
-- Ungesammelte Coins erscheinen nach einem Neuladen wieder. Bestehende Spielstände weiterhin kompatibel.
-- Noch **ein** Tisch mit **einer** Zielzone. Keine neuen Upgrades.
+- **Magnet links oben auf dem Tisch**, zunächst mit sichtbarem Schloss.
+- **Antippen → eigenes Upgrade-Fenster**, in dem der Sammelradius nur während der Auswahl sichtbar wird.
+- **Freischalten für 350 Coins**, danach in 9 weiteren Stufen bis Level 10 ausbaubar.
+- **Echte Funktion**: Gold- und Silbermünzen innerhalb des Radius werden nach dem Auftauchen zum Magneten gezogen und automatisch gutgeschrieben. Außerhalb des Radius bleibt Wischen/Antippen möglich.
+- **Schreibtisch mit schrägerer Perspektive**: mehr Tiefe, leicht seitlicher Blick, betonte Vorderkante und Tischbeine.
+- **Spielstände von v0.23** bleiben erhalten (einschließlich ungesammelter Münzen); Magnet-Level wird mit exportiert.
+- Der Upgrade Tree und die Münzmechanik bleiben unverändert.
 
-**GitHub Pages:** Die `index.html` im Repository durch die neue ersetzen. Zur Sicherheit den Spielstand vorher unter Einstellungen exportieren.
+**GitHub Pages:** Die `index.html` im Repository durch diese Datei ersetzen. Spielstand vorher zur Sicherheit über Einstellungen exportieren.
