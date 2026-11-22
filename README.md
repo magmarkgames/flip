@@ -1,17 +1,9 @@
-# FLIP v0.26 – räumlicher Schreibtisch und Magnet
+# FLIP v0.27
 
-## Neu in v0.26
+- **Gewinnmünzen sofort 3D:** Die kleinen Silber- und Goldmünzen haben bereits im ersten sichtbaren Frame ihre vollständige 3D-Form. Die flache Button-Scheibe beim Spawn wurde entfernt.
+- **Magnet überarbeitet:** Größer, weiter in die obere linke Ecke versetzt und stärker gekippt, sodass er wie ein physischer Magnet auf dem Tisch liegt. Er darf leicht aus dem Bildrand herausragen.
+- **Kantenfehler hinten behoben:** Kleine optische Bugs am Übergang von Wand/Floor an den Seiten wurden geglättet.
+- **Schreibtischlampe oben rechts:** Eine dezente Lampe wirft einen weichen Lichtkegel auf den Tisch. Die **×2-Zone** ist jetzt visuell als Lichtpool dieses Kegels lesbar.
+- **Spielmechanik unverändert:** Münzschnippen, Einsammeln, Magnet-Freischaltung, Upgrades und Spielstände bleiben kompatibel.
 
-- **Silber-/Goldmünzen sind sofort 3D:** Auch während des ersten Animationsframes bleiben Münzfläche und geriffelter Rand sichtbar. Sie fallen sanft auf die Tischoberfläche, ohne erst flach zu erscheinen.
-- **Magnet neu ausgerichtet und vergrößert:** Der Hufeisenmagnet liegt als mehrschichtiges 3D-Modell oben links. Seine beiden silbernen Magnetpole zeigen in Richtung Tisch und haben Kontaktschatten auf dem Holz. Schloss, 10 Level und automatischer Einzug bleiben erhalten.
-- **Perspektivisch projizierter 3D-Tisch:** Die Holzoberfläche ist als nach hinten geneigte Ebene dargestellt, mit Lichtverlauf, Schatten am Wandanschluss, tiefer Vorderkante, Unterseite und Tischbeinen. Horizontale Kanten bleiben gerade; interaktive Elemente werden nicht verzerrt.
-- **Prägeplatte-Label entfernt:** Der kleine Kasten „PRÄGEPLATTE ×2“ über dem Magneten wurde entfernt. Die ×2-Zielzone funktioniert weiterhin.
-- Vorhandene Spielstände und alle bestehenden Upgrades funktionieren weiter.
-
-## Installieren (GitHub Pages)
-
-Die `index.html` im GitHub-Repository ersetzen. Vorher empfiehlt sich unter Einstellungen ein Export des Spielstands. Bei älterem Seiten-Cache ggf. die Seite vollständig neu laden.
-
-## Technische Hinweise
-
-Das Spiel ist weiterhin eine einzelne HTML-Datei und benötigt keine externen Bibliotheken. Die Darstellung ist eine perspektivische HTML/CSS-/SVG-Szene; die Spielphysik und die Touch-Koordinaten bleiben in der geraden Bildschirmebene. Getestet wurden Browser-Spielzug, Magneteinkauf, Upgrade, Speicherkompatibilität, automatische Sammlung sowie mehrere Mobilformate.
+**GitHub Pages:** Die `index.html` im Repository durch die neue ersetzen. Zur Sicherheit den Spielstand vorher unter Einstellungen exportieren.

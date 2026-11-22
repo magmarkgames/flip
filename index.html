@@ -530,6 +530,52 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 .tabletop .magnet-lock,.tabletop .magnet-level{right:-3px;bottom:4px;z-index:1;}
 @media(max-width:380px){.tabletop .magnet-device{left:23%;top:19%;width:148px;height:140px;}}
 @media(max-height:600px){.room .desk{top:20%;bottom:31.7%}.room .desk-edge{top:86.8%}.room .skirting{top:19.9%}.tabletop .magnet-device{top:21%;width:112px;height:108px;}}
+
+/* FLIP v0.27 — polish: true immediate 3D reward coins, more physical magnet,
+   cleaner wall edges, and a desk lamp that defines the ×2 light pool. */
+.tabletop .reward-slot{appearance:none;-webkit-appearance:none;background:transparent!important;border:0!important;padding:0;display:block;position:absolute;overflow:visible;outline:none;touch-action:none}
+.tabletop .reward-slot:focus,.tabletop .reward-slot:focus-visible{outline:none}
+.tabletop .reward-slot .reward-coin,.tabletop .reward-slot .reward-body,.tabletop .reward-slot .reward-top,.tabletop .reward-slot .reward-bottom,.tabletop .reward-slot .reward-edge{will-change:transform,opacity}
+.tabletop .reward-slot.spawn .reward-coin{animation:cash-solid-land-v027 .28s cubic-bezier(.18,.9,.25,1.05) both;animation-delay:0ms!important}
+@keyframes cash-solid-land-v027{0%{opacity:1;transform:translateY(-15px) rotateX(33deg) rotateZ(-8deg) scale(1)}72%{opacity:1;transform:translateY(2px) rotateX(33deg) rotateZ(-8deg) scale(1.025)}100%{opacity:1;transform:translateY(0) rotateX(33deg) rotateZ(-8deg) scale(1)}}
+
+/* Hide tiny seam artifacts where the back wall/floor begin near the screen edges. */
+.room .wall{box-shadow:inset 42px 0 32px -34px #2a211d,inset -42px 0 32px -34px #2a211d,inset 0 -16px 24px #150c0b55;overflow:hidden}
+.room .floor:before,.room .floor:after{content:'';position:absolute;top:-1px;bottom:0;width:9%;pointer-events:none;z-index:2}
+.room .floor:before{left:0;background:linear-gradient(90deg,#2e2420 0%,#2b211d 18%,transparent 100%)}
+.room .floor:after{right:0;background:linear-gradient(-90deg,#2e2420 0%,#2b211d 18%,transparent 100%)}
+.room .skirting{overflow:hidden}
+.room .skirting:before{content:'';position:absolute;left:0;top:0;bottom:0;width:9%;background:linear-gradient(90deg,#3b2d28 0%,transparent 100%);pointer-events:none}
+.room .skirting:after{content:'';position:absolute;right:0;top:0;bottom:0;width:9%;background:linear-gradient(-90deg,#3b2d28 0%,transparent 100%);pointer-events:none}
+
+/* Larger magnet, partly tucked into the corner, tilted so it feels like a real object
+   resting on the wood rather than a flat icon. */
+.tabletop .magnet-device{left:10%;top:12.6%;width:clamp(185px,35vw,228px);height:clamp(168px,31vw,204px);transform:translate(-39%,-33%);filter:none;perspective:760px;overflow:visible;z-index:12}
+.tabletop .magnet-device .magnet-art{width:100%;height:100%;overflow:visible;transform:rotate(-18deg) rotateX(58deg) rotateY(-5deg);transform-origin:50% 52%;filter:drop-shadow(8px 15px 6px #140a098f)}
+.tabletop .magnet-device.locked .magnet-art{filter:saturate(.67) brightness(.92) drop-shadow(8px 15px 6px #140a0990)}
+.tabletop .magnet-device:not(.locked) .magnet-art{filter:drop-shadow(8px 15px 6px #140a098f)}
+.tabletop .magnet-device.active .magnet-art{filter:drop-shadow(8px 15px 6px #140a098f) drop-shadow(0 0 8px #7ecff144)}
+.tabletop .magnet-device:active .magnet-art{transform:rotate(-18deg) rotateX(58deg) rotateY(-5deg) scale(.96)}
+.tabletop .magnet-lock,.tabletop .magnet-level{right:5px;bottom:8px;z-index:2}
+@media(max-width:380px){.tabletop .magnet-device{left:10%;top:13%;width:156px;height:144px}}
+@media(max-height:600px){.tabletop .magnet-device{left:12%;top:15%;width:132px;height:122px}}
+
+/* Desk lamp in the upper-right corner. Its pool of light visually explains the ×2 zone. */
+.tabletop .desk-lamp{position:absolute;right:-10px;top:1.2%;width:150px;height:132px;pointer-events:none;z-index:5;overflow:visible;filter:drop-shadow(0 4px 6px #10080688)}
+.tabletop .desk-lamp .lamp-beam{position:absolute;right:26px;top:34px;width:250px;height:205px;transform:translate(50%,0);clip-path:polygon(12% 0,100% 0,70% 100%,28% 100%);background:linear-gradient(180deg,#ffe9ae2c 0%,#ffdf9118 25%,#ffd77210 55%,#ffd36a08 78%,transparent 100%);filter:blur(3px);opacity:.95}
+.tabletop .desk-lamp .lamp-beam:before{content:'';position:absolute;inset:18% 18% 10%;background:radial-gradient(circle at 64% 66%,#fff2b92c 0%,#ffe08b10 42%,transparent 72%)}
+.tabletop .desk-lamp .lamp-base{position:absolute;right:6px;top:84px;width:44px;height:14px;border-radius:50%;background:linear-gradient(180deg,#9e7d61,#432d23 62%,#241712);box-shadow:0 5px 8px #130a086f,inset 0 2px 1px #f2d3a060}
+.tabletop .desk-lamp .lamp-arm{position:absolute;right:26px;top:73px;width:8px;height:38px;border-radius:8px;background:linear-gradient(90deg,#291b16,#6a5348 40%,#b4a28f 55%,#46352d 90%);transform-origin:50% 100%;box-shadow:inset 0 1px 1px #eadfc8a0}
+.tabletop .desk-lamp .lamp-arm-a{transform:rotate(24deg)}
+.tabletop .desk-lamp .lamp-arm-b{right:51px;top:48px;height:34px;transform:rotate(-35deg)}
+.tabletop .desk-lamp .lamp-head{position:absolute;right:40px;top:24px;width:52px;height:28px;border-radius:14px 14px 18px 18px;transform:rotate(-23deg);background:linear-gradient(180deg,#2b2d31,#17191d 42%,#51555a 78%,#21242a 100%);box-shadow:inset 0 1px 1px #ffffff2a,0 3px 7px #130c0a70}
+.tabletop .desk-lamp .lamp-head:before{content:'';position:absolute;right:5px;bottom:-4px;width:33px;height:14px;border-radius:0 0 12px 12px;background:radial-gradient(ellipse at 50% 0%,#fff8e6b4 0%,#ffe9aa84 40%,transparent 78%)}
+.tabletop .desk-lamp .lamp-bulb{position:absolute;right:57px;top:40px;width:9px;height:9px;border-radius:50%;background:#fff8cc;box-shadow:0 0 18px #ffe082,0 0 30px #ffe49b55}
+
+.tabletop .target-device{z-index:6}
+.tabletop .target-device:before{inset:0;border:2.5px solid #efca7c;border-radius:50%;transform:none;background:radial-gradient(circle at 50% 48%,#ffe6ac10 0 42%,transparent 72%);box-shadow:0 0 0 2px #63411d2e,0 0 18px #ffd06a2e,inset 0 0 24px #ffe1910d;animation:none}
+.tabletop .target-device .target-engraving{color:#f3ce79;text-shadow:0 1px 2px #33200f,0 0 12px #ffe19b66}
+
 </style>
 </head>
 <body>
@@ -594,6 +640,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
    <span class="magnet-lock" id="magnetLock" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
    <span class="magnet-level" id="magnetLevelLabel" hidden>LV 1</span>
  </button>
+ <div class="desk-lamp" aria-hidden="true"><div class="lamp-beam"></div><div class="lamp-base"></div><div class="lamp-arm lamp-arm-a"></div><div class="lamp-arm lamp-arm-b"></div><div class="lamp-head"></div><div class="lamp-bulb"></div></div>
  <span id="targetProgress" hidden></span>
  <div id="targetDevice" class="target-device" role="img" aria-label="Goldene ×2-Zielzone: Triff sie mit der ganzen Kupfermünze für doppelten Gewinn."><span class="target-engraving">×2</span></div>
  <svg id="aimLine" class="aim-line" aria-hidden="true"><path id="aimArc" d=""/></svg><div id="aimMarker" class="aim-marker" aria-hidden="true"><span>+</span></div>
@@ -628,7 +675,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
   <p class="mint-note">Nur Optik: Skins ändern weder Münzwerte noch Wahrscheinlichkeiten. Bonusmünzen behalten vorerst ihre Spielmaterialien. Die Freischaltlogik folgt später.</p>
 </section>
 <section id="stats" class="page" hidden><h1 class="page-title">Statistiken</h1><p class="sub">Jeder Wurf zählt.</p><div id="statContent"></div></section>
-<section id="settings" class="page" hidden><h1 class="page-title">Einstellungen</h1><p class="sub">Dein Spiel, dein Fortschritt.</p><button class="settings-btn" id="toggleSound"></button><button class="settings-btn" id="export">Spielstand exportieren</button><button class="settings-btn" id="import">Spielstand importieren</button><input id="importFile" type="file" accept="application/json,.json" hidden><button class="settings-btn danger" id="reset">Spielstand zurücksetzen</button><p class="note">Der Fortschritt wird automatisch in diesem Browser gespeichert. Beim Wechsel des Geräts oder der Webadresse kannst du deinen exportierten Spielstand importieren. FLIP v0.26 · Räumlicher Schreibtisch · Keine Konten, keine externen Dienste.</p><details class="rules"><summary>So funktioniert FLIP v0.26</summary><p>Berühre die Kupfermünze und schnippe sie in einer kurzen, schnellen Bewegung in Richtung der goldenen ×2-Zone. Halten oder langsames Ziehen zählt nicht. Die Münze kehrt nach dem Wurf an ihren Startpunkt zurück. Krone und Totenkopf bleiben unabhängig von der Wurfstärke 50/50.</p><p>Bei Gewinn erscheinen kleine 3D-Silber- und Goldmünzen auf dem Tisch. Sammle sie durch Antippen oder indem du mit dem Finger über sie streichst. Erst das Einsammeln erhöht dein Guthaben. Die ×2-Zone ist nur wenig größer als die Kupfermünze; sie muss fast vollständig im Kreis landen, um den Bonus zu erhalten.</p><p>Diese Version ist ein Test der Wurf- und Sammelmechanik. Die alten Bonusmünzen-Verbesserungen sind noch im Skill-Tree, wirken aber nicht mehr auf werfbare Bonusmünzen. Bestehende Spielstände bleiben verwendbar.</p></details></section>
+<section id="settings" class="page" hidden><h1 class="page-title">Einstellungen</h1><p class="sub">Dein Spiel, dein Fortschritt.</p><button class="settings-btn" id="toggleSound"></button><button class="settings-btn" id="export">Spielstand exportieren</button><button class="settings-btn" id="import">Spielstand importieren</button><input id="importFile" type="file" accept="application/json,.json" hidden><button class="settings-btn danger" id="reset">Spielstand zurücksetzen</button><p class="note">Der Fortschritt wird automatisch in diesem Browser gespeichert. Beim Wechsel des Geräts oder der Webadresse kannst du deinen exportierten Spielstand importieren. FLIP v0.27 · Sofortige 3D-Gewinnmünzen · 3D-Magnet & Schreibtischlampe · Keine Konten, keine externen Dienste.</p><details class="rules"><summary>So funktioniert FLIP v0.27</summary><p>Berühre die Kupfermünze und schnippe sie in einer kurzen, schnellen Bewegung in Richtung der goldenen ×2-Zone. Halten oder langsames Ziehen zählt nicht. Die Münze kehrt nach dem Wurf an ihren Startpunkt zurück. Krone und Totenkopf bleiben unabhängig von der Wurfstärke 50/50.</p><p>Bei Gewinn erscheinen kleine 3D-Silber- und Goldmünzen sofort als vollständige 3D-Körper auf dem Tisch. Sammle sie durch Antippen oder indem du mit dem Finger über sie streichst. Erst das Einsammeln erhöht dein Guthaben. Die ×2-Zone ist nur wenig größer als die Kupfermünze; sie muss fast vollständig im Kreis landen, um den Bonus zu erhalten.</p><p>Diese Version ist ein Test der Wurf- und Sammelmechanik. Die alten Bonusmünzen-Verbesserungen sind noch im Skill-Tree, wirken aber nicht mehr auf werfbare Bonusmünzen. Bestehende Spielstände bleiben verwendbar.</p></details></section>
 </main>
 <div id="critBanner" class="critical-banner" aria-live="polite" aria-atomic="true" hidden></div><div class="toast" id="toast" role="status" hidden></div>
 <script id="engine">
