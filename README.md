@@ -1,12 +1,9 @@
-# FLIP v0.18 — Radialer Upgrade-Tree
+# FLIP v0.20 – Skill Flip Test
 
-## Änderungen
-- Upgrade-Tree ist jetzt **bildschirmfüllend** und seine vier Pfade gehen von der zentralen Startmünze nach oben, rechts, unten und links.
-- Du kannst den Tree ziehen, mit zwei Fingern zoomen oder die vier Bereichs-Buttons verwenden.
-- Der **Schließen**-Button befindet sich unten mittig, auf derselben Höhe wie der bisherige **Upgrade Tree**-Button. Der kleine X-Button oben bleibt als Alternative.
-- Münzen fliegen bei jedem Wurf etwa 16–18 % höher, unabhängig von der Wischstärke.
-- Fast-Flip-Detailansicht zeigt jetzt die richtige Basiszeit von 2,5 s statt 2 s an.
-- Spiellogik, Balancing, Speicherformat und Cosmetics bleiben unverändert.
+Neu: Eine sichtbare Prägeplatte (×2) auf dem Tisch, genau eine Trefferzone. Beim Wischen bestimmst du mit der Richtung und Strecke den ungefähren Landepunkt der Hauptmünze. Ein Flugbahn-Pfeil und ein Zielpunkt helfen beim Zielen (grün = in der Zone). Eine kleine natürliche Streuung bleibt. Die Wischgeschwindigkeit beeinflusst nach wie vor nur die Rotationen, nicht Wurfzeit oder Gewinnchance.
 
-## GitHub Pages
-Ersetze im Repository einfach die `index.html`. Vorher zur Sicherheit den Spielstand exportieren.
+Treffer + Krone verdoppelt den Ertrag der Hauptmünze für diesen Wurf. Totenkopf bleibt eine Niete, ohne Änderung an der 50/50-Verteilung. Bonusmünzen landen weiterhin automatisch. Die Gesamttreffer werden angezeigt und mitgespeichert.
+
+Zum Testen ist die Prägeplatte direkt freigeschaltet – noch keine Kosten, neuen Tische oder Upgrades. Die bestehende Skill-Tree-, Mint- und Save-Funktion bleibt erhalten. Alle Dateien liegen direkt auf ZIP-Root-Ebene.
+
+Installation: `index.html` im Stammverzeichnis deines GitHub-Pages-Repos ersetzen. Vorher als Vorsichtsmaßnahme in den Einstellungen einen JSON-Spielstand exportieren.
