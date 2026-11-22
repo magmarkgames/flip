@@ -1,17 +1,14 @@
-# FLIP v0.16 – Critical Effects & Mint
+# FLIP v0.17 – Wisch-Toleranz & Fast Flip
 
-## Neu
+Die Hauptmünze und alle Bonusmünzen werden weiter gemeinsam durch Wischen geworfen.
 
-- Kritische Würfe: Blitzanimation am jeweiligen Treffer, kurzer violetter Lichtimpuls, „ϟ CRITICAL ×10…“ und spezieller Elektro-Sound.
-- Neue Mint-Seite über das Glitzer-Icon im Header.
-- 5 Rahmen, 5 Materialien, 8 Symbole jeweils für Gewinn und Niete sowie 5 Auren. Alle sind sofort verfügbar.
-- Auswahl wird im bestehenden Spielstand (`flip-v0.1-save`) gespeichert und über JSON-Export/Import mitgenommen.
-- Bonusmünzen bleiben aus Gründen der Spielbarkeit silber/gold. Die veränderte Hauptmünze beeinflusst nicht die Chancen.
+## Änderungen
+- Standarddauer eines Wurfs: **2,5 Sekunden** (statt 2,0).
+- Fast Flip: **16 Stufen à 5 %**, maximal **−80 %**, Wurfdauer dann **0,5 Sekunden**.
+- Fast Flip hat dieselben Preise und Voraussetzungen wie bisher; nur eine weitere Stufe kommt hinzu.
+- Neue Wisch-Toleranz: langsame Gesten ergeben leicht 2–3 Rotationen; erst eine schnelle, gezielte Geste ergibt 8–9 Rotationen.
+- Wischstärke beeinflusst weiterhin **nur die Drehung**, nicht Flugbahn, Dauer oder Gewinnwahrscheinlichkeit.
+- Bestehende Spielstände und Cosmetics bleiben erhalten; die LocalStorage-ID ist unverändert.
 
-## Installation
-
-Alte `index.html` in deinem GitHub Pages Repository durch die neue ersetzen. Zur Sicherheit zuvor über Einstellungen den Spielstand exportieren.
-
-## Hinweis
-
-Noch keine Unlock-Logik: jedes Cosmetic ist sofort frei verfügbar.
+## Upgrade in GitHub Pages
+Die `index.html` des Repositories ersetzen. Vorher in den Spieleinstellungen nach Bedarf den Spielstand exportieren.
