@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#65412c"><meta name="description" content="FLIP – aus einer Münze entsteht mehr."><title>FLIP – v0.22</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#65412c"><meta name="description" content="FLIP – aus einer Münze entsteht mehr."><title>FLIP – v0.23</title>
 <style>
 :root{color-scheme:dark;--bg:#141619;--panel:#1d2024;--line:#30343a;--muted:#9299a2;--text:#f1f0ed;--gold:#e7b77b;--green:#91c7a5;--blue:#a0bddb;--orange:#f0a56c}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100dvh;-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;color:inherit;touch-action:manipulation}button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}button:disabled{cursor:default}button, .coin{user-select:none}main{width:min(100%,530px);margin:auto;padding:18px 19px calc(84px + env(safe-area-inset-bottom))}header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.brand{font-size:21px;font-weight:850;letter-spacing:6px}.version{font-size:10px;color:var(--muted);letter-spacing:.05em}.icon-button{background:var(--panel);border:1px solid var(--line);border-radius:12px;width:42px;height:42px;display:grid;place-items:center}.icon-button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.balance{text-align:center;margin:12px 0 19px}.eyebrow{text-transform:uppercase;font-size:10px;letter-spacing:2.1px;color:var(--muted);font-weight:650}.balance strong{display:block;font-size:clamp(33px,9vw,53px);line-height:1.12;color:var(--gold);letter-spacing:-1.8px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.metrics{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:12px 0}.metric{text-align:center;min-width:0}.metric+.metric{border-left:1px solid var(--line)}.metric span{display:block;color:var(--muted);font-size:11px}.metric strong{display:block;font-size:20px;margin:3px 0 0;font-variant-numeric:tabular-nums}.hot{color:var(--orange)}.arena{min-height:252px;display:flex;align-items:center;flex-direction:column;justify-content:center;padding:20px 0 13px;position:relative}.coin-button{padding:0;background:transparent;border:0;border-radius:50%;display:grid;place-items:center;width:164px;height:164px;position:relative;perspective:550px}.coin-button:disabled{opacity:1}.coin{--metal:#c48d61;--light:#f0ca9f;--dark:#835130;--rim:#9a623d;width:143px;height:143px;position:relative;transform-style:preserve-3d;transition:filter .2s;filter:drop-shadow(0 6px 0 var(--rim)) drop-shadow(0 12px 15px #0005)}.face{position:absolute;inset:0;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(145deg,var(--light),var(--metal) 42%,var(--metal) 72%,var(--rim));border:2px solid var(--light);backface-visibility:hidden;color:var(--dark);box-shadow:inset 0 0 0 5px var(--metal),inset 0 0 0 7px var(--light),inset 0 0 0 9px var(--metal);overflow:hidden}.face:before{content:'';position:absolute;inset:15px;border:1px dashed var(--dark);border-radius:50%;opacity:.45}.face svg{width:54%;height:54%;fill:currentColor;opacity:.88}.face b{font-size:56px;line-height:1;font-weight:850}.face small{font-size:9px;letter-spacing:3px;font-weight:800;margin-top:7px}.tails{transform:rotateX(180deg)}.coin.is-tails{transform:rotateX(180deg)}.coin-button.streak .coin{filter:drop-shadow(0 6px 0 var(--rim)) drop-shadow(0 0 20px #d88b4350)}.coin-button:active:not(:disabled){transform:scale(.97)}.bonus-label{color:var(--muted);font-size:11px;margin:17px 0 9px}.bonuses{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:100%}.bonus-slot{perspective:300px;position:relative}.mini{--metal:#97b2c9;--light:#d6e4ec;--dark:#50677e;--rim:#5b7b95;width:49px;height:49px;filter:drop-shadow(0 3px 0 var(--rim))}.mini .face{border-width:1px;box-shadow:inset 0 0 0 2px var(--metal),inset 0 0 0 3px var(--light)}.mini .face:before{inset:6px}.mini .face b{font-size:24px}.mini .face small{display:none}.bonus-slot.new{animation:spawn .32s ease-out both}.bonus-slot.lost{animation:vanish .28s ease-in both}.bonus-slot.saved:after{content:'✓';position:absolute;right:-4px;top:-7px;color:var(--green);font-size:15px;font-weight:bold}.more{align-self:center;color:var(--muted);font-size:12px}.result{text-align:center;min-height:48px;margin:8px 0 14px}.result strong{display:block;font-size:25px;line-height:1.2;font-variant-numeric:tabular-nums;color:var(--green)}.result strong.neutral{color:var(--muted);font-size:18px}.result p{margin:5px 0 0;color:var(--muted);font-size:12px;line-height:1.4}.flip{width:100%;border:0;border-radius:13px;background:var(--gold);color:#332214;font-size:15px;letter-spacing:3px;font-weight:850;padding:15px;box-shadow:0 3px 0 #9d744b}.flip:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #9d744b}.flip:disabled{opacity:.65}.shop{margin-top:25px}.section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 11px}.section-title h2{font-size:15px;margin:0}.section-title span{font-size:11px;color:var(--muted)}.upgrade{display:grid;grid-template-columns:39px minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:8px}.upgrade-icon{height:39px;width:39px;border-radius:10px;display:grid;place-items:center;background:#293747;color:var(--blue)}.upgrade-icon svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.upgrade[data-id=survival] .upgrade-icon{background:#293b32;color:var(--green)}.upgrade[data-id=protection] .upgrade-icon{background:#433327;color:var(--orange)}.upgrade h3{font-size:13px;margin:0 0 3px}.upgrade p{font-size:11px;color:var(--muted);margin:0;line-height:1.4}.upgrade .chance{color:var(--text);font-size:12px;font-weight:650;margin-top:4px}.buy{border:1px solid #735638;border-radius:9px;background:#3b2d22;color:var(--gold);padding:10px 8px;font-size:12px;min-width:68px;font-weight:750;font-variant-numeric:tabular-nums}.buy:disabled{border-color:var(--line);background:#25282d;color:#81868d}.locked{padding:11px 4px;font-size:11px;color:var(--muted);display:flex;gap:8px;align-items:center}.locked svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.7}.bottom{position:fixed;bottom:0;left:0;right:0;background:#191c20;border-top:1px solid var(--line);padding:7px 0 calc(7px + env(safe-area-inset-bottom));z-index:5}.nav-inner{margin:auto;max-width:530px;display:flex;justify-content:space-around}.nav{flex:1;background:none;border:0;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11px;padding:6px}.nav svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}.nav.active{color:var(--gold)}.page[hidden]{display:none}.page-title{font-size:25px;margin:20px 0 4px;letter-spacing:-.5px}.sub{margin:0 0 20px;color:var(--muted);font-size:13px}.stat-group{background:var(--panel);border:1px solid var(--line);border-radius:15px;margin-bottom:13px;padding:4px 14px}.stat{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;font-size:13px}.stat+.stat{border-top:1px solid var(--line)}.stat span{color:var(--muted)}.stat strong{font-variant-numeric:tabular-nums;text-align:right;overflow-wrap:anywhere}.settings-btn{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:9px;text-align:left;font-size:14px}.settings-btn.danger{color:#e69b98}.note{font-size:12px;line-height:1.55;color:var(--muted)}.rules{font-size:12px;color:var(--muted);line-height:1.55;border-top:1px solid var(--line);margin-top:17px;padding-top:13px}.rules summary{cursor:pointer;color:var(--text)}.rules p{margin:8px 0}.save-error{color:#f4b49b;font-size:12px;margin:6px 0}.toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%);background:#30363b;color:var(--text);padding:10px 15px;border-radius:10px;font-size:12px;z-index:10;box-shadow:0 4px 24px #0005;max-width:90%;text-align:center}.toast[hidden]{display:none}@keyframes spawn{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}@keyframes vanish{to{opacity:0;transform:scale(.1)}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}@media(max-width:350px){main{padding-left:12px;padding-right:12px}.upgrade{gap:7px;padding:9px}.metric span{font-size:10px}.buy{min-width:60px}}
 
@@ -360,6 +360,43 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 .tabletop #coinButton{touch-action:none;cursor:grab}
 .tabletop #coinButton.grabbing{cursor:grabbing}
 
+
+/* FLIP v0.23 — lighter, more top-down coins; true finger-sweep collection. */
+.tabletop{--view:21deg}
+.tabletop .coin{--depth:calc(var(--diam)*.10)}
+.tabletop .coin-stage:before{filter:blur(5px);opacity:.45;transform:translate(3px,6px)}
+.tabletop .coin-stage .mult-badge{min-width:23px;height:23px;font-size:11px;right:-5%;top:-8%;padding:1px 3px}
+.tabletop .coin-stage .mult-badge svg{width:12px;height:12px}
+.tabletop .target-device{display:grid;place-items:center;isolation:isolate;perspective:none;background:transparent;box-shadow:none;filter:none;pointer-events:none;overflow:visible;transform:translate(-50%,-50%);z-index:1}
+.tabletop .target-device:before{content:'';position:absolute;inset:0;border:2.5px dashed #f5cb72;border-radius:50%;transform:none;background:rgba(255,211,117,.035);box-shadow:0 0 0 2px #54381738,0 0 12px #ffcc7240,inset 0 0 15px #f8d27b1b;animation:none}
+.tabletop .target-device .target-engraving{position:relative;z-index:2;display:block;color:#ffd77e;font-size:clamp(19px,5.5vw,26px);font-weight:900;letter-spacing:.02em;text-shadow:0 1px 2px #39240f,0 0 9px #ffcb6d99;transform:none}
+.tabletop .target-device.target-hit:before{border-color:#fff1bb;box-shadow:0 0 16px #ffdf89a8,inset 0 0 13px #ffdf8944}
+.tabletop .target-caption,.tabletop .target-plating,.tabletop .target-inner{display:none!important}
+.tabletop #targetProgress{display:none!important}
+.tabletop .target-counter{padding:4px 7px;max-width:none;opacity:.8;font-size:9px}
+.tabletop .target-counter-icon{font-size:12px}
+/* Touch targets remain generous even though visible coins have half the diameter. */
+.tabletop .reward-slot{width:44px;height:44px;--diam:30px;touch-action:none}
+.tabletop .reward-slot.big{width:46px;height:46px;--diam:32px}
+.tabletop .reward-slot.stack{width:48px;height:48px;--diam:34px}
+.tabletop .reward-slot .reward-coin{inset:7px;transform:rotateX(21deg) rotateZ(-8deg)}
+.tabletop .reward-slot .reward-body{--rdepth:6px}
+.tabletop .reward-slot .reward-top{transform:translateZ(3px)}
+.tabletop .reward-slot .reward-bottom{transform:rotateX(180deg) translateZ(3px)}
+.tabletop .reward-slot .reward-edge{height:6px;margin-top:-3px}
+.tabletop .reward-slot .reward-top em{font-size:15px}
+.tabletop .reward-slot.big .reward-top em{font-size:15px}
+.tabletop .reward-slot.stack .reward-top em{font-size:14px}
+.tabletop .reward-slot:before{inset:17% 11%;transform:translate(2px,5px) scale(.91,.7);filter:blur(2.5px);opacity:.5}
+.tabletop .reward-slot .reward-stack-tag{font-size:9px;height:16px;min-width:16px;right:0;top:0}
+.tabletop .reward-slot.spawn .reward-coin{animation:cash-drop-v023 .36s cubic-bezier(.22,.9,.25,1.1) both;animation-delay:var(--cash-delay,0ms)}
+.tabletop .reward-slot.collecting .reward-coin{animation:cash-collect-v023 .23s ease-out forwards;animation-delay:0ms}
+@keyframes cash-drop-v023{from{opacity:0;transform:translateY(-30px) rotateX(60deg) rotateZ(40deg) scale(.65)}70%{opacity:1;transform:translateY(2px) rotateX(16deg) rotateZ(-8deg) scale(1.05)}to{opacity:1;transform:rotateX(21deg) rotateZ(-8deg) scale(1)}}
+@keyframes cash-collect-v023{to{opacity:0;transform:translateY(-20px) rotateX(10deg) rotateZ(12deg) scale(.2)}}
+.tabletop .cash-layer{pointer-events:none}
+.tabletop .cash-layer .reward-slot{pointer-events:auto}
+@media(prefers-reduced-motion:reduce){.tabletop .reward-slot.spawn .reward-coin{animation:none}}
+
 </style>
 </head>
 <body>
@@ -370,8 +407,8 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 <section id="play" class="page">
 <div class="arena"><div class="metrics"><div class="metric cold-record" title="Beste Totenkopfserie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17 20.66 7M9 4l3 3 3-3M9 20l3-3 3 3M4 10l4-1-1-4M17 19l-1-4 4-1M4 14l4 1-1 4M17 5l-1 4 4 1"/></svg><strong id="bestColdDisplay" aria-label="Beste Totenkopfserie">0</strong></div><div class="metric current" title="Aktuelle Kopfserie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22c-4.4 0-7-3-7-7 0-3 1.7-5.7 4-7-.3 2.5 1 3.5 2 4 2-3 2.2-6.5 1-10 5 4 7 8 7 13 0 4-2.6 7-7 7Z"/><path d="M12 22c-2 0-3-1.6-3-3.2 0-1.5 1-3 3-4.8 2 1.8 3 3.3 3 4.8 0 1.6-1 3.2-3 3.2Z"/></svg><strong id="streak" aria-label="Aktuelle Serie">0</strong></div><div class="metric record" title="Beste Kopfserie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 6 5 5 4-7 4 7 5-5-2 12H5L3 6Zm2 15h14"/></svg><strong id="best" aria-label="Beste Kopfserie">0</strong></div></div>
 <div id="tabletop" class="tabletop">
- <div class="target-counter" aria-live="off"><span class="target-counter-icon">◎</span><span>PRÄGEPLATTE <b>×2</b></span><small id="targetProgress">0 Treffer</small></div>
- <div id="targetDevice" class="target-device" role="img" aria-label="Prägeplatte, Trefferzone für die Hauptmünze. Bei einer Gewinnseite verdoppelt sich deren Ertrag."><div class="target-plating"><div class="target-inner"><span class="target-engraving">×2</span></div></div><span class="target-caption">TREFFERZONE</span></div>
+ <div class="target-counter" aria-live="off"><span class="target-counter-icon">◎</span><span>PRÄGEPLATTE <b>×2</b></span><small id="targetProgress" hidden></small></div>
+ <div id="targetDevice" class="target-device" role="img" aria-label="Goldene ×2-Zielzone: Triff sie mit der ganzen Kupfermünze für doppelten Gewinn."><span class="target-engraving">×2</span></div>
  <svg id="aimLine" class="aim-line" aria-hidden="true"><path id="aimArc" d=""/></svg><div id="aimMarker" class="aim-marker" aria-hidden="true"><span>+</span></div>
  <div id="targetFeedback" class="target-feedback" aria-live="polite"></div>
  <div id="critFX" class="critical-fx" aria-hidden="true"></div><div class="coin-stage"><button id="coinButton" class="coin-button" aria-label="Hauptmünze schnell schnippen (Tastatur: Eingabe oder Leertaste)"></button><span id="mult" class="mult-badge" aria-label="Serie" hidden></span></div>
@@ -396,7 +433,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
   <p class="mint-note">Nur Optik: Skins ändern weder Münzwerte noch Wahrscheinlichkeiten. Bonusmünzen behalten vorerst ihre Spielmaterialien. Die Freischaltlogik folgt später.</p>
 </section>
 <section id="stats" class="page" hidden><h1 class="page-title">Statistiken</h1><p class="sub">Jeder Wurf zählt.</p><div id="statContent"></div></section>
-<section id="settings" class="page" hidden><h1 class="page-title">Einstellungen</h1><p class="sub">Dein Spiel, dein Fortschritt.</p><button class="settings-btn" id="toggleSound"></button><button class="settings-btn" id="export">Spielstand exportieren</button><button class="settings-btn" id="import">Spielstand importieren</button><input id="importFile" type="file" accept="application/json,.json" hidden><button class="settings-btn danger" id="reset">Spielstand zurücksetzen</button><p class="note">Der Fortschritt wird automatisch in diesem Browser gespeichert. Beim Wechsel des Geräts oder der Webadresse kannst du deinen exportierten Spielstand importieren. FLIP v0.22 · Keine Konten, keine externen Dienste.</p><details class="rules"><summary>So funktioniert FLIP v0.22</summary><p>Berühre die Kupfermünze und schnippe sie in einer kurzen, schnellen Bewegung in Richtung der ×2-Prägeplatte. Halten oder langsames Ziehen zählt nicht. Entscheidend ist der Impuls beim Loslassen. Die Münze kehrt nach dem Wurf an ihren Startpunkt zurück. Krone und Totenkopf bleiben unabhängig von der Wurfstärke 50/50.</p><p>Bei Gewinn erscheinen dreidimensionale Silber- und Goldmünzen auf dem Tisch. Tippe sie an, um ihren Wert deinem Guthaben gutzuschreiben. Fünf Coins können zum Beispiel als eine Goldmünze dargestellt werden. Treffer in der ×2-Zone verdoppeln den Ertrag einer gewonnenen Hauptmünze.</p><p>Diese Version ist ein Test der Wurf- und Sammelmechanik. Die alten Bonusmünzen-Verbesserungen sind noch im Skill-Tree, wirken aber nicht mehr auf werfbare Bonusmünzen. Bestehende Spielstände bleiben verwendbar.</p></details></section>
+<section id="settings" class="page" hidden><h1 class="page-title">Einstellungen</h1><p class="sub">Dein Spiel, dein Fortschritt.</p><button class="settings-btn" id="toggleSound"></button><button class="settings-btn" id="export">Spielstand exportieren</button><button class="settings-btn" id="import">Spielstand importieren</button><input id="importFile" type="file" accept="application/json,.json" hidden><button class="settings-btn danger" id="reset">Spielstand zurücksetzen</button><p class="note">Der Fortschritt wird automatisch in diesem Browser gespeichert. Beim Wechsel des Geräts oder der Webadresse kannst du deinen exportierten Spielstand importieren. FLIP v0.23 · Keine Konten, keine externen Dienste.</p><details class="rules"><summary>So funktioniert FLIP v0.23</summary><p>Berühre die Kupfermünze und schnippe sie in einer kurzen, schnellen Bewegung in Richtung der goldenen ×2-Zone. Halten oder langsames Ziehen zählt nicht. Die Münze kehrt nach dem Wurf an ihren Startpunkt zurück. Krone und Totenkopf bleiben unabhängig von der Wurfstärke 50/50.</p><p>Bei Gewinn erscheinen kleine 3D-Silber- und Goldmünzen auf dem Tisch. Sammle sie durch Antippen oder indem du mit dem Finger über sie streichst. Erst das Einsammeln erhöht dein Guthaben. Die ×2-Zone ist nur wenig größer als die Kupfermünze; sie muss fast vollständig im Kreis landen, um den Bonus zu erhalten.</p><p>Diese Version ist ein Test der Wurf- und Sammelmechanik. Die alten Bonusmünzen-Verbesserungen sind noch im Skill-Tree, wirken aber nicht mehr auf werfbare Bonusmünzen. Bestehende Spielstände bleiben verwendbar.</p></details></section>
 </main>
 <div id="critBanner" class="critical-banner" aria-live="polite" aria-atomic="true" hidden></div><div class="toast" id="toast" role="status" hidden></div>
 <script id="engine">
@@ -599,10 +636,11 @@ function makeCoin(mini=false,heads=true,golden=false){const el=document.createEl
 $('coinButton').append(makeCoin(false,state.mainHeadsLast));
 const tabletop=$('tabletop'), mainSlot=$('coinButton').parentElement;const targetDevice=$('targetDevice'),aimLine=$('aimLine'),aimArc=$('aimArc'),aimMarker=$('aimMarker');let targetZone={x:0,y:0,r:40},targetFeedbackTimer;const auraLayer=document.createElement('div');auraLayer.className='cosmetic-aura-layer';auraLayer.setAttribute('aria-hidden','true');mainSlot.prepend(auraLayer);
 let board={w:0,h:0,main:120,bonus:48};
-function measure(){const w=tabletop.clientWidth,h=tabletop.clientHeight;if(!w||!h)return false;const main=Math.min(190,w*.48,h*.53),bonus=Math.min(80,Math.max(36,main*.44),h*.32);board={w,h,main,bonus};tabletop.style.setProperty('--main-size',main+'px');tabletop.style.setProperty('--bonus-size',bonus+'px');placeTargetDevice();return true;}
+function measure(){const w=tabletop.clientWidth,h=tabletop.clientHeight;if(!w||!h)return false;const main=Math.min(95,w*.24,h*.265),bonus=Math.min(40,Math.max(20,main*.44),h*.17);board={w,h,main,bonus};tabletop.style.setProperty('--main-size',main+'px');tabletop.style.setProperty('--bonus-size',bonus+'px');placeTargetDevice();return true;}
 function placeTargetDevice(){
- const r=Math.max(32,Math.min(48,board.w*.13,board.h*.15));
- const pad=board.main/2+5;
+ // The copper coin fits inside the dashed ring with ~10px room on every side.
+ const r=board.main/2+11;
+ const pad=r+7;
  const x=Math.max(pad,Math.min(board.w-pad,board.w*.76));
  const y=Math.max(pad,Math.min(board.h-pad,board.h*.30));
  targetZone={x,y,r};targetDevice.style.left=x+'px';targetDevice.style.top=y+'px';
@@ -621,7 +659,7 @@ function aimFromGesture(g,x,y){
  return {x:clamp(g.origin.x+deltaX*.94,pad,board.w-pad),
          y:clamp(g.origin.y+deltaY*.94,pad,board.h-pad)};
 }
-function isTargetHit(p){return Math.hypot(p.x-targetZone.x,p.y-targetZone.y)<=targetZone.r;}
+function isTargetHit(p){return Math.hypot(p.x-targetZone.x,p.y-targetZone.y)<=Math.max(10,targetZone.r-board.main/2+3);}
 function showAim(g,x,y){
  const distance=Math.hypot(x-g.x,y-g.y);
  if(distance<9){hideAim();return;}
@@ -632,7 +670,7 @@ function showAim(g,x,y){
  aimArc.setAttribute('d',`M ${o.x.toFixed(1)} ${o.y.toFixed(1)} Q ${((o.x+p.x)/2).toFixed(1)} ${(Math.min(o.y,p.y)-42).toFixed(1)} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`);
 }
 function hideAim(){tabletop.classList.remove('is-aiming');aimMarker.classList.remove('on-target');}
-function updateTargetProgress(){const t=state.tableTraining;$('targetProgress').textContent=fmt(t.hits)+' Treffer';}
+function updateTargetProgress(){ /* hit record is still kept internally, but not shown */ }
 function targetFeedback(hit,won,bonus){
  clearTimeout(targetFeedbackTimer);targetDevice.classList.toggle('target-hit',hit);
  const el=$('targetFeedback');el.className='target-feedback'+(hit?' active':'');
@@ -810,7 +848,7 @@ function animateCoin(el,heads,ms,newAngle,spawn=false,power=.5){
  const mini=el.classList.contains('mini');
  // Fixed trajectory: all swipe strengths use the same arc; only the flips vary.
  const height=mini?Math.max(14,Math.min(168,board.h*.225)):Math.min(280,board.h*.315);
- const tr=(x,y,z,scale=1)=>`translateY(${y}px) scale(${scale}) rotateX(33deg) rotateZ(${z}deg) rotateX(${x}deg)`;
+ const tr=(x,y,z,scale=1)=>`translateY(${y}px) scale(${scale}) rotateX(21deg) rotateZ(${z}deg) rotateX(${x}deg)`;
  el.classList.toggle('is-tails',!heads);setAngle(slot,newAngle);
  if(!ms||!el.animate)return Promise.resolve();
  const z=t=>old+(newAngle-old)*t;
@@ -1015,7 +1053,7 @@ let lastBoardSize=tabletop.clientWidth+'x'+tabletop.clientHeight;new ResizeObser
     const y=Math.max(board.main*.62, Math.min(board.h-board.main*.58, board.h*.74));
     return {x,y,r:board.main/2};
   }
-  function cashPos(el){return {x:Number(el.dataset.x)||0,y:Number(el.dataset.y)||0,r:Number(el.dataset.r)||28};}
+  function cashPos(el){return {x:Number(el.dataset.x)||0,y:Number(el.dataset.y)||0,r:Number(el.dataset.r)||22};}
   function placeCash(el,p){el.dataset.x=p.x;el.dataset.y=p.y;el.dataset.r=p.r;el.style.left=p.x+'px';el.style.top=p.y+'px';}
   function cashOccupied(exclude=null){
     const base=[startPos(),{x:targetZone.x,y:targetZone.y,r:targetZone.r+14}];
@@ -1066,31 +1104,59 @@ let lastBoardSize=tabletop.clientWidth+'x'+tabletop.clientHeight;new ResizeObser
     ding(920,.06,.028); ding(1320,.045,.02,.04);
     setTimeout(()=>slot.remove(),320);
   }
-  cashLayer.addEventListener('click',e=>{
-    const slot=e.target.closest('.reward-slot');
-    if(!slot||busy) return;
-    e.stopPropagation();
-    collectReward(slot);
+  // Collect by tapping a coin OR sweeping across several coins.
+  // A gesture beginning on the copper coin belongs exclusively to the flick throw.
+  let cashSwipe=null;
+  function rewardAt(x,y){
+    const el=document.elementFromPoint(x,y);
+    return el&&el.closest('.reward-slot');
+  }
+  function collectAcross(x1,y1,x2,y2){
+    const len=Math.hypot(x2-x1,y2-y1),steps=Math.max(1,Math.min(48,Math.ceil(len/9)));
+    for(let i=0;i<=steps;i++){
+      const p=i/steps,slot=rewardAt(x1+(x2-x1)*p,y1+(y2-y1)*p);
+      if(slot&&cashLayer.contains(slot))collectReward(slot);
+    }
+  }
+  tabletop.addEventListener('pointerdown',e=>{
+    if(busy||cashSwipe||!e.isPrimary||e.button!==0||e.target.closest('#coinButton'))return;
+    if(e.target.closest('button:not(.reward-slot)'))return;
+    cashSwipe={id:e.pointerId,x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY,moved:false};
+    try{tabletop.setPointerCapture(e.pointerId);}catch{}
+    e.preventDefault();
   });
+  tabletop.addEventListener('pointermove',e=>{
+    if(!cashSwipe||cashSwipe.id!==e.pointerId)return;
+    const g=cashSwipe;
+    if(Math.hypot(e.clientX-g.startX,e.clientY-g.startY)>7)g.moved=true;
+    if(g.moved)collectAcross(g.x,g.y,e.clientX,e.clientY);
+    g.x=e.clientX;g.y=e.clientY;
+  });
+  tabletop.addEventListener('pointerup',e=>{
+    if(!cashSwipe||cashSwipe.id!==e.pointerId)return;
+    const g=cashSwipe;cashSwipe=null;
+    if(g.moved)collectAcross(g.x,g.y,e.clientX,e.clientY);
+    else{const slot=rewardAt(e.clientX,e.clientY);if(slot&&cashLayer.contains(slot))collectReward(slot);}
+  });
+  tabletop.addEventListener('pointercancel',e=>{if(cashSwipe?.id===e.pointerId)cashSwipe=null;});
+  tabletop.addEventListener('lostpointercapture',e=>{if(cashSwipe?.id===e.pointerId)cashSwipe=null;});
 
-  function spawnRewards(amount, critical=false){
-    if(amount<=0||!measure()) return;
+  function spawnRewards(amount, critical=false, animated=true){
+    if(amount<=0||!board.w||!board.h)return;
     const items=cashBreakdown(amount);
     const entries=Array.isArray(items)?items:[];
-    const source=position(mainSlot);
-    for(const entry of entries){
-      const value=typeof entry==='number'?entry:entry.value; const size=value>=25?34:value>=5?31:28;
-      const slot=rewardNode(entry,critical); const p=cashSpot(size);
-      placeCash(slot,source); cashLayer.appendChild(slot);
-      if(slot.animate){
-        slot.animate([
-          {transform:'translate(-50%,-50%) scale(.4)',opacity:0},
-          {transform:'translate(calc(-50% + '+((p.x-source.x)*.75).toFixed(1)+'px), calc(-50% + '+((p.y-source.y)*.75).toFixed(1)+'px)) scale(1.06)',opacity:1,offset:.72},
-          {transform:'translate(calc(-50% + '+(p.x-source.x).toFixed(1)+'px), calc(-50% + '+(p.y-source.y).toFixed(1)+'px)) scale(1)',opacity:1}
-        ],{duration:reduced()?0:520,easing:'cubic-bezier(.18,.88,.25,1)'}).finished.catch(()=>{});
-      }
+    for(let j=0;j<entries.length;j++){
+      const entry=entries[j],value=typeof entry==='number'?entry:entry.value;
+      const radius=value>=25?24:value>=5?23:22;
+      const slot=rewardNode(entry,critical);
+      // The coin's own coordinates NEVER change during the main coin's return.
+      // Animate only the reward's inner 3D body dropping vertically in place.
+      const p=cashSpot(radius);
       placeCash(slot,p);
-      setTimeout(()=>slot.classList.remove('spawn'),400);
+      if(!animated)slot.classList.remove('spawn');
+      else slot.style.setProperty('--cash-delay',Math.min(j,6)*38+'ms');
+      cashLayer.appendChild(slot);
+      if(animated)setTimeout(()=>slot.classList.remove('spawn'),650);
     }
     updatePending();
   }
@@ -1112,14 +1178,14 @@ let lastBoardSize=tabletop.clientWidth+'x'+tabletop.clientHeight;new ResizeObser
     if(last.skipped) parts.push('Streak +2');
     if(t){ el.classList.add('milestone'); parts.push(t.name); }
     if(last.coldMilestone>=3) parts.push('Cold Streak');
-    if(last.gain>0) parts.push('Münzen antippen zum Einsammeln');
+    if(last.gain>0) parts.push('Münzen antippen oder einsammeln durch Wischen');
     detail.textContent=parts.join(' · ');
     if(busy){ void el.offsetWidth; el.classList.add('flash'); }
   };
 
   updateBonusLabel=function(){ bonusLabel.hidden=true; bonusLabel.textContent=''; };
-  renderBonuses=function(){ cashLayer.replaceChildren(); if(!measure()) return; const start=startPos(); place(mainSlot,start); setAngle(mainSlot,0); updateBonusLabel(); updatePending(); };
-  relayout=function(){ if(!measure()) return; const start=startPos(); place(mainSlot,start); const coins=[...cashLayer.children]; for(const c of coins){ const r=Number(c.dataset.r)||28; const p=cashSpot(r,c); placeCash(c,p);} updatePending(); };
+  renderBonuses=function(){ cashLayer.replaceChildren(); if(!measure()) return; const start=startPos(); place(mainSlot,start); setAngle(mainSlot,0); updateBonusLabel(); spawnRewards(state.tableCash||0,false,false); updatePending(); };
+  relayout=function(){ if(!measure()) return; const start=startPos(); place(mainSlot,start); const coins=[...cashLayer.children]; for(const c of coins){ const r=Number(c.dataset.r)||22; const p=cashSpot(r,c); placeCash(c,p);} updatePending(); };
   updateCoinCosmetics=function(){ paintCoin($('coinButton').querySelector('.coin'),state.cosmetics); auraLayer.dataset.aura=state.cosmetics.aura; };
   criticalImpact=function(out, slots=[]){
     if(!out.summary.critical) return; const loc=[position(mainSlot)];

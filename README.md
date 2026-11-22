@@ -1,10 +1,11 @@
-# FLIP v0.22 — 3D-Münzen und Flick-Steuerung
+# FLIP v0.23
 
-- Gold- und Silber-Geldmünzen mit Ober-/Unterseiten und modellierter 3D-Kante.
-- ×2-Prägeplatte mit plastischem Metallrand und Schatten.
-- Werfen nur noch durch kurzen Schnipp auf der Hauptmünze (max. 420 ms; mindestens 42 px und schnelle Loslassbewegung). Kein Halten-und-Ziehen.
-- Münze kehrt an den festen Start zurück.
-- Ungesammeltes Geld wird auch nach dem Neuladen wieder angezeigt.
-- Alte Spielstände bleiben lesbar; alte Bonus-Skills sind vorläufig deaktiviert, bis der Upgrade-Tree umgebaut wird.
+- **Alle Münzen rund halb so groß** (Kupfer, Silber, Gold); Perspektive flacher / näher an Top-View.
+- **×2-Zone vereinfacht:** goldenes „×2“ in einem goldenen gestrichelten Kreis, nur wenig größer als die Hauptmünze. Bonus nur, wenn die Hauptmünze fast vollständig hineinpasst.
+- **Trefferzähler am Tisch ausgeblendet.** Bisherige Statistiken werden nicht gelöscht.
+- **Geldmünzen einsammeln:** Einzeln antippen oder mit dem Finger über mehrere Münzen wischen. Der Schnipp auf der Hauptmünze bleibt getrennt.
+- **Rückflug-Bug behoben:** Neue Geldmünzen werden direkt am endgültigen Ort erzeugt und fallen dort herunter; sie bewegen sich beim Zurückkehren der Hauptmünze nicht mehr mit.
+- Ungesammelte Coins erscheinen nach einem Neuladen wieder. Bestehende Spielstände weiterhin kompatibel.
+- Noch **ein** Tisch mit **einer** Zielzone. Keine neuen Upgrades.
 
-**Installation:** ZIP enthält `index.html` und `README.md` direkt auf oberster Ebene. GitHub Pages: `index.html` ersetzen. Zur Sicherheit zuvor den Spielstand exportieren.
+**GitHub Pages:** Die `index.html` im Repository durch die neue ersetzen. Zur Sicherheit den Spielstand vorher unter Einstellungen exportieren.
