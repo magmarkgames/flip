@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#65412c"><meta name="description" content="FLIP – aus einer Münze entsteht mehr."><title>FLIP – v0.17</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#65412c"><meta name="description" content="FLIP – aus einer Münze entsteht mehr."><title>FLIP – v0.18</title>
 <style>
 :root{color-scheme:dark;--bg:#141619;--panel:#1d2024;--line:#30343a;--muted:#9299a2;--text:#f1f0ed;--gold:#e7b77b;--green:#91c7a5;--blue:#a0bddb;--orange:#f0a56c}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100dvh;-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;color:inherit;touch-action:manipulation}button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}button:disabled{cursor:default}button, .coin{user-select:none}main{width:min(100%,530px);margin:auto;padding:18px 19px calc(84px + env(safe-area-inset-bottom))}header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.brand{font-size:21px;font-weight:850;letter-spacing:6px}.version{font-size:10px;color:var(--muted);letter-spacing:.05em}.icon-button{background:var(--panel);border:1px solid var(--line);border-radius:12px;width:42px;height:42px;display:grid;place-items:center}.icon-button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.balance{text-align:center;margin:12px 0 19px}.eyebrow{text-transform:uppercase;font-size:10px;letter-spacing:2.1px;color:var(--muted);font-weight:650}.balance strong{display:block;font-size:clamp(33px,9vw,53px);line-height:1.12;color:var(--gold);letter-spacing:-1.8px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.metrics{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:12px 0}.metric{text-align:center;min-width:0}.metric+.metric{border-left:1px solid var(--line)}.metric span{display:block;color:var(--muted);font-size:11px}.metric strong{display:block;font-size:20px;margin:3px 0 0;font-variant-numeric:tabular-nums}.hot{color:var(--orange)}.arena{min-height:252px;display:flex;align-items:center;flex-direction:column;justify-content:center;padding:20px 0 13px;position:relative}.coin-button{padding:0;background:transparent;border:0;border-radius:50%;display:grid;place-items:center;width:164px;height:164px;position:relative;perspective:550px}.coin-button:disabled{opacity:1}.coin{--metal:#c48d61;--light:#f0ca9f;--dark:#835130;--rim:#9a623d;width:143px;height:143px;position:relative;transform-style:preserve-3d;transition:filter .2s;filter:drop-shadow(0 6px 0 var(--rim)) drop-shadow(0 12px 15px #0005)}.face{position:absolute;inset:0;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(145deg,var(--light),var(--metal) 42%,var(--metal) 72%,var(--rim));border:2px solid var(--light);backface-visibility:hidden;color:var(--dark);box-shadow:inset 0 0 0 5px var(--metal),inset 0 0 0 7px var(--light),inset 0 0 0 9px var(--metal);overflow:hidden}.face:before{content:'';position:absolute;inset:15px;border:1px dashed var(--dark);border-radius:50%;opacity:.45}.face svg{width:54%;height:54%;fill:currentColor;opacity:.88}.face b{font-size:56px;line-height:1;font-weight:850}.face small{font-size:9px;letter-spacing:3px;font-weight:800;margin-top:7px}.tails{transform:rotateX(180deg)}.coin.is-tails{transform:rotateX(180deg)}.coin-button.streak .coin{filter:drop-shadow(0 6px 0 var(--rim)) drop-shadow(0 0 20px #d88b4350)}.coin-button:active:not(:disabled){transform:scale(.97)}.bonus-label{color:var(--muted);font-size:11px;margin:17px 0 9px}.bonuses{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:100%}.bonus-slot{perspective:300px;position:relative}.mini{--metal:#97b2c9;--light:#d6e4ec;--dark:#50677e;--rim:#5b7b95;width:49px;height:49px;filter:drop-shadow(0 3px 0 var(--rim))}.mini .face{border-width:1px;box-shadow:inset 0 0 0 2px var(--metal),inset 0 0 0 3px var(--light)}.mini .face:before{inset:6px}.mini .face b{font-size:24px}.mini .face small{display:none}.bonus-slot.new{animation:spawn .32s ease-out both}.bonus-slot.lost{animation:vanish .28s ease-in both}.bonus-slot.saved:after{content:'✓';position:absolute;right:-4px;top:-7px;color:var(--green);font-size:15px;font-weight:bold}.more{align-self:center;color:var(--muted);font-size:12px}.result{text-align:center;min-height:48px;margin:8px 0 14px}.result strong{display:block;font-size:25px;line-height:1.2;font-variant-numeric:tabular-nums;color:var(--green)}.result strong.neutral{color:var(--muted);font-size:18px}.result p{margin:5px 0 0;color:var(--muted);font-size:12px;line-height:1.4}.flip{width:100%;border:0;border-radius:13px;background:var(--gold);color:#332214;font-size:15px;letter-spacing:3px;font-weight:850;padding:15px;box-shadow:0 3px 0 #9d744b}.flip:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #9d744b}.flip:disabled{opacity:.65}.shop{margin-top:25px}.section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 11px}.section-title h2{font-size:15px;margin:0}.section-title span{font-size:11px;color:var(--muted)}.upgrade{display:grid;grid-template-columns:39px minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:8px}.upgrade-icon{height:39px;width:39px;border-radius:10px;display:grid;place-items:center;background:#293747;color:var(--blue)}.upgrade-icon svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.upgrade[data-id=survival] .upgrade-icon{background:#293b32;color:var(--green)}.upgrade[data-id=protection] .upgrade-icon{background:#433327;color:var(--orange)}.upgrade h3{font-size:13px;margin:0 0 3px}.upgrade p{font-size:11px;color:var(--muted);margin:0;line-height:1.4}.upgrade .chance{color:var(--text);font-size:12px;font-weight:650;margin-top:4px}.buy{border:1px solid #735638;border-radius:9px;background:#3b2d22;color:var(--gold);padding:10px 8px;font-size:12px;min-width:68px;font-weight:750;font-variant-numeric:tabular-nums}.buy:disabled{border-color:var(--line);background:#25282d;color:#81868d}.locked{padding:11px 4px;font-size:11px;color:var(--muted);display:flex;gap:8px;align-items:center}.locked svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.7}.bottom{position:fixed;bottom:0;left:0;right:0;background:#191c20;border-top:1px solid var(--line);padding:7px 0 calc(7px + env(safe-area-inset-bottom));z-index:5}.nav-inner{margin:auto;max-width:530px;display:flex;justify-content:space-around}.nav{flex:1;background:none;border:0;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11px;padding:6px}.nav svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}.nav.active{color:var(--gold)}.page[hidden]{display:none}.page-title{font-size:25px;margin:20px 0 4px;letter-spacing:-.5px}.sub{margin:0 0 20px;color:var(--muted);font-size:13px}.stat-group{background:var(--panel);border:1px solid var(--line);border-radius:15px;margin-bottom:13px;padding:4px 14px}.stat{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;font-size:13px}.stat+.stat{border-top:1px solid var(--line)}.stat span{color:var(--muted)}.stat strong{font-variant-numeric:tabular-nums;text-align:right;overflow-wrap:anywhere}.settings-btn{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:9px;text-align:left;font-size:14px}.settings-btn.danger{color:#e69b98}.note{font-size:12px;line-height:1.55;color:var(--muted)}.rules{font-size:12px;color:var(--muted);line-height:1.55;border-top:1px solid var(--line);margin-top:17px;padding-top:13px}.rules summary{cursor:pointer;color:var(--text)}.rules p{margin:8px 0}.save-error{color:#f4b49b;font-size:12px;margin:6px 0}.toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%);background:#30363b;color:var(--text);padding:10px 15px;border-radius:10px;font-size:12px;z-index:10;box-shadow:0 4px 24px #0005;max-width:90%;text-align:center}.toast[hidden]{display:none}@keyframes spawn{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}@keyframes vanish{to{opacity:0;transform:scale(.1)}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}@media(max-width:350px){main{padding-left:12px;padding-right:12px}.upgrade{gap:7px;padding:9px}.metric span{font-size:10px}.buy{min-width:60px}}
 
@@ -212,6 +212,48 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 @media(max-width:375px){.header-actions .icon-button{width:32px;height:32px}.mint-preview{height:123px}.mint-option{padding:7px 5px;gap:5px}.mint-option-label b{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.tabletop .cosmetic-aura-layer,.critical-burst *, .critical-banner.active,.critical-flash.active{animation:none!important}.critical-banner.active{opacity:1}}
 
+
+/* v0.18: fullscreen radial skill tree */
+#shopDrawer{
+  position:fixed!important;inset:0!important;left:0!important;right:0!important;top:0!important;bottom:0!important;
+  width:100vw!important;max-width:none!important;height:100dvh!important;max-height:100dvh!important;
+  border:0!important;border-radius:0!important;
+  padding:calc(11px + env(safe-area-inset-top)) clamp(9px,3vw,22px) calc(10px + env(safe-area-inset-bottom))!important;
+  background:radial-gradient(ellipse at 50% 45%,#57412e,#2c2019 85%);
+  box-shadow:none;overflow:hidden!important;display:flex!important;flex-direction:column!important;
+}
+#shopDrawer .drawer-grip{display:none!important}
+#shopDrawer .drawer-heading{margin:0 0 6px;min-height:32px;align-items:center}
+#shopDrawer .drawer-heading h2{font-size:18px}
+#shopDrawer .drawer-heading .drawer-close{opacity:.55;width:34px;height:34px}
+#shopDrawer .tree-toolbar{padding:3px 0 6px;min-height:34px;flex:none}
+#shopDrawer .tree-nav{padding:0 0 7px;gap:5px}
+#shopDrawer #treeViewport{
+  flex:1 1 auto;min-height:0;width:100%;overflow:auto;
+  border-radius:14px;border:1px solid #99714e80;
+  background:radial-gradient(ellipse at 50% 50%,#69503977,#35271fb3 82%),repeating-linear-gradient(0deg,transparent 0 25px,#ffffff06 26px 27px);
+  touch-action:pan-x pan-y;scrollbar-width:none;overscroll-behavior:contain;
+}
+#shopDrawer #treeViewport::-webkit-scrollbar{display:none}
+#shopDrawer .tree-canvas{background:radial-gradient(circle at 50% 50%,#ac8a541d,transparent 33%)}
+#shopDrawer .tree-canvas .tree-root{z-index:2}
+#shopDrawer .tree-canvas .tree-branch{
+  position:absolute!important;left:0!important;top:0!important;width:100%!important;height:100%!important;
+  margin:0!important;padding:0!important;pointer-events:none;
+}
+#shopDrawer .tree-canvas .tree-branch .branch-name{position:absolute!important;transform:translateX(-50%)!important;z-index:3}
+#shopDrawer .tree-canvas .tree-node{pointer-events:auto}
+#shopDrawer .tree-legend{font-size:10px;min-height:24px;padding:6px 0 0;color:#cdb79d;flex:none}
+#treeBottomClose{
+  z-index:8;flex:none;align-self:center;display:flex;align-items:center;justify-content:center;gap:8px;
+  border:1px solid #d4a97990;border-radius:40px;background:#291910;
+  box-shadow:0 3px 12px #1e100c80;color:#ffe6c6;
+  padding:10px 23px;font-size:13px;font-weight:700;min-height:44px;margin:4px auto 2px;
+}
+#treeBottomClose svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#treeDetail{inset:calc(114px + env(safe-area-inset-top)) 0 calc(70px + env(safe-area-inset-bottom));z-index:6;padding:8px}
+#treeDetail .detail-panel{max-height:100%;overscroll-behavior:contain}
+@media(max-height:600px){#shopDrawer .tree-legend{display:none}#shopDrawer .tree-nav button{padding:5px 6px}#shopDrawer .drawer-heading{min-height:26px;margin:0}#shopDrawer .tree-toolbar{min-height:30px}}
 </style>
 </head>
 <body>
@@ -225,7 +267,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 <button id="bonusLabel" class="bonus-label" disabled hidden></button><div class="bonuses" id="bonuses"></div></div>
 <div class="result" aria-live="polite" aria-atomic="true"><strong class="neutral" id="result">Wische über den Bildschirm</strong><p id="resultDetail"></p></div></div>
 <button id="shopToggle" class="shop-toggle" aria-controls="shopDrawer" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></svg>Upgrade Tree</button>
-<div class="drawer-shade" id="drawerShade" aria-hidden="true"></div><section id="shopDrawer" class="shop" aria-label="Upgrades" inert><button class="drawer-grip" id="drawerGrip" aria-label="Upgrades schließen"></button><div class="drawer-heading"><h2>Upgrade Tree</h2><button class="drawer-close" id="drawerClose" aria-label="Upgrades schließen"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button></div><div class="tree-toolbar"><span id="treeBalance"></span><button id="testToggle" type="button" class="test-toggle">Testmodus</button><div class="tree-zoom"><button id="zoomOut" aria-label="Verkleinern">−</button><button id="zoomReset" aria-label="Ansicht zurücksetzen">100%</button><button id="zoomIn" aria-label="Vergrößern">+</button></div></div><div class="tree-nav"><button data-jump="spawn">Vermehrung</button><button data-jump="survival">Überleben</button><button data-jump="streak">Streaks</button><button data-jump="special">Spezial</button></div><div id="treeViewport" tabindex="0" aria-label="Upgrade Tree, verschiebbar"><div id="upgrades"></div></div><div class="tree-legend">Alle 20 Skills · Verzweigte Pfade · <span>Tippe auf einen Knoten</span></div><div id="treeDetail" hidden></div></section>
+<div class="drawer-shade" id="drawerShade" aria-hidden="true"></div><section id="shopDrawer" class="shop" aria-label="Upgrades" inert><button class="drawer-grip" id="drawerGrip" aria-label="Upgrades schließen"></button><div class="drawer-heading"><h2>Upgrade Tree</h2><button class="drawer-close" id="drawerClose" aria-label="Upgrades schließen"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button></div><div class="tree-toolbar"><span id="treeBalance"></span><button id="testToggle" type="button" class="test-toggle">Testmodus</button><div class="tree-zoom"><button id="zoomOut" aria-label="Verkleinern">−</button><button id="zoomReset" aria-label="Ansicht zurücksetzen">100%</button><button id="zoomIn" aria-label="Vergrößern">+</button></div></div><div class="tree-nav"><button data-jump="spawn">Vermehrung</button><button data-jump="survival">Überleben</button><button data-jump="streak">Streaks</button><button data-jump="special">Spezial</button></div><div id="treeViewport" tabindex="0" aria-label="Upgrade Tree, verschiebbar"><div id="upgrades"></div></div><div class="tree-legend">Alle 20 Skills · Frei in alle Richtungen · <span>Knoten antippen</span></div><button id="treeBottomClose" type="button" class="tree-bottom-close" aria-label="Upgrade-Tree schließen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>Schließen</button><div id="treeDetail" hidden></div></section>
 </section>
 <section id="mint" class="page mint-page" hidden>
   <div class="mint-title-line"><div><h1 class="page-title">Mint</h1><p class="sub">Gestalte deine Hauptmünze.</p></div><span class="mint-all">Alles freigeschaltet</span></div>
@@ -497,16 +539,33 @@ const BRANCHES=[
  {id:'streak',name:'Streaks',color:'#ffc078',nodes:[{id:'protection',x:140,y:12},{id:'skip',x:54,y:132,parent:'protection'},{id:'hotBoost',x:220,y:132,parent:'protection'},{id:'lastFlame',x:54,y:265,parent:'protection'},{id:'coldSpawn',x:220,y:265,parent:'protection'},{id:'comebackBoost',x:220,y:398,parent:'coldSpawn'}]},
  {id:'special',name:'Spezial',color:'#d4a2ef',nodes:[{id:'fast',x:140,y:12},{id:'coinValue',x:67,y:132,parent:'fast'},{id:'critical',x:215,y:132,parent:'fast'},{id:'criticalPower',x:215,y:265,parent:'critical'}]}
 ];
-const TREE_WIDTH=1144,TREE_HEIGHT=665,BRANCH_WIDTH=280,BRANCH_LEFT=12,BRANCH_TOP=148;
-let selectedUpgrade=null,treeZoom=1,treeOpened=false,storedState=null;
+// v0.18: A radial, explorable upgrade tree with four independent directions.
+const TREE_WIDTH=1530,TREE_HEIGHT=1510,TREE_CENTER={x:760,y:740};
+const RADIAL_POINTS={
+  duplication:[760,480],twin:[615,350],golden:[905,350],chain:[480,195],triple:[700,170],goldenTouch:[1035,205],
+  survival:[1040,710],second:[1220,565],revival:[1220,785],memory:[1400,900],
+  protection:[760,965],skip:[610,1100],hotBoost:[905,1105],lastFlame:[485,1260],coldSpawn:[1000,1255],comebackBoost:[1120,1380],
+  fast:[485,710],coinValue:[315,575],critical:[315,830],criticalPower:[135,965]
+};
+const RADIAL_LABELS={spawn:[760,420],survival:[1180,675],streak:[760,1045],special:[355,665]};
+const treePoint=id=>{const [x,y]=RADIAL_POINTS[id];return {x,y};};
+let selectedUpgrade=null,treeZoom=Math.max(.46,Math.min(.8,(window.innerWidth-75)/575)),treeOpened=false,storedState=null;
 const effect=(id,l)=>id==='fast'?'−'+(l*5)+' %':id==='coinValue'?'+'+l+' Coin':id==='criticalPower'?'×'+(10+l):id==='hotBoost'?'+'+(l*5)+' %':id==='coldSpawn'?'+'+(l*2)+' %':id==='comebackBoost'?'+'+l+'×':l+' %';
 function requirements(r){let a=[];if(state.stats.earned<r.unlock&&!state.testMode)a.push(fmt(state.stats.earned)+' / '+fmt(r.unlock)+' insgesamt verdiente Coins');if(r.requires&&state.levels[r.requires[0]]<r.requires[1]&&!state.testMode){const p=RULE_BY_ID[r.requires[0]];a.push(p.name+': '+effect(p.id,state.levels[p.id])+' / '+effect(p.id,r.requires[1]));}return a;}
-function treeConnections(){const lines=[];
- for(let b=0;b<BRANCHES.length;b++){
-   const branch=BRANCHES[b],ox=BRANCH_LEFT+b*BRANCH_WIDTH,oy=BRANCH_TOP;
-   const first=branch.nodes[0];const tx=ox+first.x,ty=oy+first.y+25;
-   lines.push(`<path d="M572 84 V108 H${tx} V${ty}" stroke="${branch.color}" stroke-opacity=".57"/>`);
-   for(const n of branch.nodes){if(!n.parent)continue;const p=branch.nodes.find(v=>v.id===n.parent);const x1=ox+p.x,y1=oy+p.y+57,x2=ox+n.x,y2=oy+n.y+5;lines.push(`<path d="M${x1} ${y1} C${x1} ${(y1+y2)/2} ${x2} ${(y1+y2)/2} ${x2} ${y2}" stroke="${branch.color}" stroke-opacity=".65"/>`);}
+function treeConnections(){
+ const lines=[];
+ const draw=(x1,y1,x2,y2,color,opacity)=>{
+   const dx=x2-x1,dy=y2-y1;
+   return `<path d="M${x1} ${y1} C${x1+dx*.38} ${y1+dy*.12} ${x2-dx*.38} ${y2-dy*.12} ${x2} ${y2}" stroke="${color}" stroke-opacity="${opacity}"/>`;
+ };
+ for(const branch of BRANCHES){
+   const first=treePoint(branch.nodes[0].id);
+   lines.push(draw(TREE_CENTER.x,TREE_CENTER.y,first.x,first.y+28,branch.color,.77));
+   for(const n of branch.nodes){
+     if(!n.parent)continue;
+     const a=treePoint(n.parent),b=treePoint(n.id);
+     lines.push(draw(a.x,a.y+28,b.x,b.y+28,branch.color,.6));
+   }
  }
  return `<svg class="tree-wires" width="${TREE_WIDTH}" height="${TREE_HEIGHT}" viewBox="0 0 ${TREE_WIDTH} ${TREE_HEIGHT}" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">${lines.join('')}</svg>`;
 }
@@ -514,21 +573,32 @@ function renderShop(){
  const el=$('upgrades');const viewport=$('treeViewport'),left=viewport.scrollLeft,top=viewport.scrollTop;
  $('treeBalance').textContent='◉ '+fmt(state.coins);
  $('testToggle').textContent=state.testMode?'Testmodus beenden':'Testmodus';$('testToggle').classList.toggle('is-testing',!!state.testMode);
- el.innerHTML=`<div class="tree-canvas">${treeConnections()}<div class="tree-root">♛</div>`+
- BRANCHES.map((branch,b)=>`<div class="tree-branch" style="--branch:${branch.color};left:${BRANCH_LEFT+b*BRANCH_WIDTH}px;top:${BRANCH_TOP}px"><div class="branch-name">${branch.name}</div>`+
+ el.innerHTML=`<div class="tree-canvas">${treeConnections()}<div class="tree-root" style="left:${TREE_CENTER.x-27}px;top:${TREE_CENTER.y-27}px">♛</div>`+
+ BRANCHES.map(branch=>`<div class="tree-branch" style="--branch:${branch.color}"><div class="branch-name" style="left:${RADIAL_LABELS[branch.id][0]}px;top:${RADIAL_LABELS[branch.id][1]}px">${branch.name}</div>`+
  branch.nodes.map(n=>{const r=RULE_BY_ID[n.id],l=state.levels[n.id],open=unlocked(state,r),max=l>=maxLevel(r),afford=open&&!busy&&!max&&(state.testMode||state.coins>=cost(n.id,l)),progress=Math.round(l/maxLevel(r)*100);
- return `<button class="tree-node ${open?'available':'locked-node'} ${afford?'afford':''} ${max?'maxed':''}" style="left:${n.x}px;top:${n.y}px;--progress:${progress}%" data-node="${n.id}" aria-label="${r.name}: ${effect(n.id,l)}${open?'':', gesperrt'}"><span class="node-circle">${icon(open||l>0?n.id:'lock')}<b>${max?'MAX':open?effect(n.id,l):'🔒'}</b></span><span class="node-name">${r.name}</span></button>`;}).join('')+'</div>').join('')+'</div>';
+ return `<button class="tree-node ${open?'available':'locked-node'} ${afford?'afford':''} ${max?'maxed':''}" style="left:${treePoint(n.id).x}px;top:${treePoint(n.id).y}px;--progress:${progress}%" data-node="${n.id}" aria-label="${r.name}: ${effect(n.id,l)}${open?'':', gesperrt'}"><span class="node-circle">${icon(open||l>0?n.id:'lock')}<b>${max?'MAX':open?effect(n.id,l):'🔒'}</b></span><span class="node-name">${r.name}</span></button>`;}).join('')+'</div>').join('')+'</div>';
  applyZoom();viewport.scrollLeft=left;viewport.scrollTop=top;renderDetail();
 }
 function renderDetail(){
  const box=$('treeDetail');if(!selectedUpgrade){box.hidden=true;return;}
  const r=RULE_BY_ID[selectedUpgrade],l=state.levels[r.id],open=unlocked(state,r),max=l>=maxLevel(r),p=cost(r.id,l),branch=BRANCHES.find(b=>b.id===r.group);
  box.hidden=false;box.style.setProperty('--branch',branch.color);
- box.innerHTML=`<div class="detail-panel"><button class="detail-close" data-detail-close aria-label="Schließen">×</button><div class="detail-icon">${icon(r.id)}</div><h3>${r.name}</h3><p>${r.desc}</p><div class="detail-effect">${effect(r.id,l)} ${max?'':`<span>→ ${effect(r.id,l+1)}</span>`}</div><small>Level ${l} / ${maxLevel(r)}</small><div class="tree-progress"><i style="width:${l/maxLevel(r)*100}%"></i></div>${r.id==='fast'?`<p>Beispiel bei 2 s Basis: ${(2*fastFactor(state)).toFixed(2).replace('.',',')} s ${max?'':`→ ${(2*(1-(l+1)*.05)).toFixed(2).replace('.',',')} s`}</p>`:''}${!open?`<div class="tree-requirements"><b>Freischaltung</b>${requirements(r).map(t=>`<div>${t}</div>`).join('')}</div>`:''}<button class="detail-buy" data-tree-buy="${r.id}" ${!open||max||busy||(!state.testMode&&state.coins<p)?'disabled':''}>${max?'MAX LEVEL':!open?'Gesperrt':state.testMode?'Test: +1 Level':`Verbessern · ${fmt(p)} ◉`}</button>${state.testMode&&!max?`<button class="detail-testmax" data-tree-max="${r.id}">Im Test auf MAX setzen</button>`:''}${state.testMode?'<div class="test-hint">Nur zum Ausprobieren · Änderungen werden nicht gespeichert</div>':''}</div>`;
+ box.innerHTML=`<div class="detail-panel"><button class="detail-close" data-detail-close aria-label="Schließen">×</button><div class="detail-icon">${icon(r.id)}</div><h3>${r.name}</h3><p>${r.desc}</p><div class="detail-effect">${effect(r.id,l)} ${max?'':`<span>→ ${effect(r.id,l+1)}</span>`}</div><small>Level ${l} / ${maxLevel(r)}</small><div class="tree-progress"><i style="width:${l/maxLevel(r)*100}%"></i></div>${r.id==='fast'?`<p>Beispiel bei 2,5 s Basis: ${(2.5*fastFactor(state)).toFixed(2).replace('.',',')} s ${max?'':`→ ${(2.5*(1-(l+1)*.05)).toFixed(2).replace('.',',')} s`}</p>`:''}${!open?`<div class="tree-requirements"><b>Freischaltung</b>${requirements(r).map(t=>`<div>${t}</div>`).join('')}</div>`:''}<button class="detail-buy" data-tree-buy="${r.id}" ${!open||max||busy||(!state.testMode&&state.coins<p)?'disabled':''}>${max?'MAX LEVEL':!open?'Gesperrt':state.testMode?'Test: +1 Level':`Verbessern · ${fmt(p)} ◉`}</button>${state.testMode&&!max?`<button class="detail-testmax" data-tree-max="${r.id}">Im Test auf MAX setzen</button>`:''}${state.testMode?'<div class="test-hint">Nur zum Ausprobieren · Änderungen werden nicht gespeichert</div>':''}</div>`;
 }
 function applyZoom(){const el=$('upgrades');el.style.width=(TREE_WIDTH*treeZoom)+'px';el.style.height=(TREE_HEIGHT*treeZoom)+'px';el.style.setProperty('--tree-scale',treeZoom);$('zoomReset').textContent=Math.round(treeZoom*100)+'%';}
-function changeZoom(z){treeZoom=Math.max(.65,Math.min(1.8,z));applyZoom();}
-function jumpBranch(id){const i=BRANCHES.findIndex(b=>b.id===id);if(i<0)return;const v=$('treeViewport');v.scrollTo({left:Math.max(0,(BRANCH_LEFT+i*BRANCH_WIDTH+BRANCH_WIDTH/2)*treeZoom-v.clientWidth/2),top:Math.max(0,BRANCH_TOP*treeZoom-38),behavior:'smooth'});}
+function changeZoom(z){
+ const v=$('treeViewport'),cx=(v.scrollLeft+v.clientWidth/2)/treeZoom,cy=(v.scrollTop+v.clientHeight/2)/treeZoom;
+ treeZoom=Math.max(.48,Math.min(1.8,z));applyZoom();
+ v.scrollLeft=cx*treeZoom-v.clientWidth/2;v.scrollTop=cy*treeZoom-v.clientHeight/2;
+}
+function centerTree(animated=false){
+ const v=$('treeViewport');v.scrollTo({left:Math.max(0,TREE_CENTER.x*treeZoom-v.clientWidth/2),top:Math.max(0,TREE_CENTER.y*treeZoom-v.clientHeight/2),behavior:animated?'smooth':'instant'});
+}
+function jumpBranch(id){
+ const b=BRANCHES.find(b=>b.id===id);if(!b)return;
+ const n=treePoint(b.nodes[0].id),v=$('treeViewport');
+ v.scrollTo({left:Math.max(0,n.x*treeZoom-v.clientWidth/2),top:Math.max(0,(n.y+28)*treeZoom-v.clientHeight/2),behavior:'smooth'});
+}
 function toggleTestMode(){
  if(busy)return;
  if(!state.testMode){storedState=state;state=JSON.parse(JSON.stringify(state));state.testMode=true;state.coins=1000000000000;state.stats.earned=Math.max(state.stats.earned,1000000000000);}
@@ -591,7 +661,7 @@ function animateCoin(el,heads,ms,newAngle,spawn=false,power=.5){
  const b=(heads?0:180)+360*turns;
  const mini=el.classList.contains('mini');
  // Fixed trajectory: all swipe strengths use the same arc; only the flips vary.
- const height=mini?Math.max(14,Math.min(145,board.h*.19)):Math.min(240,board.h*.27);
+ const height=mini?Math.max(14,Math.min(168,board.h*.225)):Math.min(280,board.h*.315);
  const tr=(x,y,z,scale=1)=>`translateY(${y}px) scale(${scale}) rotateX(33deg) rotateZ(${z}deg) rotateX(${x}deg)`;
  el.classList.toggle('is-tails',!heads);setAngle(slot,newAngle);
  if(!ms||!el.animate)return Promise.resolve();
@@ -666,8 +736,8 @@ async function flipRound(power=.5){
    await Promise.all(extra);for(const slot of lost)slot.remove();for(const slot of slots)slot.classList.remove('saved');fillBonuses();
  }finally{busy=false;play.classList.remove('round-busy');button.disabled=false;for(const slot of $('bonuses').children)slot.disabled=false;updateBonusLabel();if(board.w!==tabletop.clientWidth||board.h!==tabletop.clientHeight)relayout();}
 }
-function setShop(open){if(!open){selectedUpgrade=null;renderDetail();}else{renderShop();requestAnimationFrame(()=>{applyZoom();if(!treeOpened){jumpBranch('spawn');treeOpened=true;}});}$('shopDrawer').classList.toggle('open',open);$('shopDrawer').inert=!open;$('drawerShade').classList.toggle('open',open);$('shopToggle').setAttribute('aria-expanded',String(open));if(!open&&$('shopDrawer').contains(document.activeElement))$('shopToggle').focus();}
-$('shopToggle').onclick=()=>setShop(!$('shopDrawer').classList.contains('open'));$('drawerShade').onclick=$('drawerClose').onclick=$('drawerGrip').onclick=()=>setShop(false);
+function setShop(open){if(!open){selectedUpgrade=null;renderDetail();}else{renderShop();} $('shopDrawer').classList.toggle('open',open);$('shopDrawer').inert=!open;$('drawerShade').classList.toggle('open',open);$('shopToggle').setAttribute('aria-expanded',String(open));if(open){requestAnimationFrame(()=>{applyZoom();if(!treeOpened){centerTree();treeOpened=true;}});}else if($('shopDrawer').contains(document.activeElement))$('shopToggle').focus();}
+$('shopToggle').onclick=()=>setShop(!$('shopDrawer').classList.contains('open'));$('drawerShade').onclick=$('drawerClose').onclick=$('drawerGrip').onclick=$('treeBottomClose').onclick=()=>setShop(false);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(selectedUpgrade){selectedUpgrade=null;renderDetail();}else setShop(false);}});let touchY=0;$('drawerGrip').addEventListener('touchstart',e=>touchY=e.touches[0].clientY,{passive:true});$('drawerGrip').addEventListener('touchend',e=>{if(e.changedTouches[0].clientY-touchY>20)setShop(false)},{passive:true});
 // Capture a swipe from any non-control area of the game screen, including the coins.
 const mainButton=$('coinButton');let swipe=null;
