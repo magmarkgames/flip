@@ -1,9 +1,9 @@
 # FLIP v0.27
 
-- **Gewinnmünzen sofort 3D:** Die kleinen Silber- und Goldmünzen haben bereits im ersten sichtbaren Frame ihre vollständige 3D-Form. Die flache Button-Scheibe beim Spawn wurde entfernt.
-- **Magnet überarbeitet:** Größer, weiter in die obere linke Ecke versetzt und stärker gekippt, sodass er wie ein physischer Magnet auf dem Tisch liegt. Er darf leicht aus dem Bildrand herausragen.
-- **Kantenfehler hinten behoben:** Kleine optische Bugs am Übergang von Wand/Floor an den Seiten wurden geglättet.
-- **Schreibtischlampe oben rechts:** Eine dezente Lampe wirft einen weichen Lichtkegel auf den Tisch. Die **×2-Zone** ist jetzt visuell als Lichtpool dieses Kegels lesbar.
-- **Spielmechanik unverändert:** Münzschnippen, Einsammeln, Magnet-Freischaltung, Upgrades und Spielstände bleiben kompatibel.
+- **Gewinnmünzen vom ersten Frame als 3D:** Münzkörper und Riffelrand bleiben während des Spawns unverändert, nur das Positionieren/Herunterfallen erfolgt über die äußere Hülle. Keine 2D→3D-Umwandlung mehr.
+- **Magnet in echter CSS-3D-Schichtung:** mehrere räumlich getrennte Metall-/Lack-Ebenen (mit Schatten und 3D-Neigung), größer, weiter links oben und etwas aus dem Bildausschnitt gerückt. Freischaltung, Levels, Radius und Einsammeln bleiben erhalten.
+- **Hintere Ecken des Tisches:** 3D-Holzoberfläche lückenlos bis über die Ränder verlängert; keine dreieckigen Lücken an der Wand mehr.
+- **Neue Schreibtischlampe:** rechts oben mit metallischen Armen und warmem Schirm; ihr sanfter Lichtkreis ist die ×2-Zone (unveränderte Trefferlogik). Das gestrichelte Ziel wird durch die leuchtende Kontur ersetzt.
 
-**GitHub Pages:** Die `index.html` im Repository durch die neue ersetzen. Zur Sicherheit den Spielstand vorher unter Einstellungen exportieren.
+## Installation
+Die `index.html` im GitHub-Pages-Repository durch diese Version ersetzen. Spielstand vorher optional in Einstellungen exportieren; bisherige Speicherstände bleiben kompatibel.
