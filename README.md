@@ -1,11 +1,9 @@
-# FLIP v0.24 — Magnet & neue Tischperspektive
+# FLIP v0.25 – gerader Tisch & echter 3D-Magnet
 
-- **Magnet links oben auf dem Tisch**, zunächst mit sichtbarem Schloss.
-- **Antippen → eigenes Upgrade-Fenster**, in dem der Sammelradius nur während der Auswahl sichtbar wird.
-- **Freischalten für 350 Coins**, danach in 9 weiteren Stufen bis Level 10 ausbaubar.
-- **Echte Funktion**: Gold- und Silbermünzen innerhalb des Radius werden nach dem Auftauchen zum Magneten gezogen und automatisch gutgeschrieben. Außerhalb des Radius bleibt Wischen/Antippen möglich.
-- **Schreibtisch mit schrägerer Perspektive**: mehr Tiefe, leicht seitlicher Blick, betonte Vorderkante und Tischbeine.
-- **Spielstände von v0.23** bleiben erhalten (einschließlich ungesammelter Münzen); Magnet-Level wird mit exportiert.
-- Der Upgrade Tree und die Münzmechanik bleiben unverändert.
+- Die Holzfläche ist wieder **gerade und symmetrisch**: keine Drehung, Scherung oder seitliche Neigung.
+- Die **vordere Tischkante** ist jetzt deutlich dicker mit einer sichtbaren hellen Fase und massiver Holzfront.
+- Die **große Kupfermünze**, kleine Silber- und Goldmünzen besitzen sichtbar mehr Seitenstärke. Die Wurf-Animation wurde an den neuen Blickwinkel angepasst.
+- Neuer, handgezeichneter **dreidimensionaler Hufeisenmagnet**, der links oben auf dem Holz liegt: Emaille-Glanz, echte Seitenfläche, Metall-Endstücke und Kontaktschatten. Das kleine Schloss bleibt beim gesperrten Magneten sichtbar.
+- Freischaltung, Upgrade-System, Magnet-Sammelradius, Geldmünzen und bisherige Spielstände funktionieren weiter wie in v0.24.
 
-**GitHub Pages:** Die `index.html` im Repository durch diese Datei ersetzen. Spielstand vorher zur Sicherheit über Einstellungen exportieren.
+**Installation:** Die Datei `index.html` im GitHub-Pages-Repository ersetzen. Vorher sicherheitshalber über Einstellungen einen Spielstand exportieren.
