@@ -1,9 +1,10 @@
-# FLIP v0.27
+# FLIP v0.28
 
-- **Gewinnmünzen vom ersten Frame als 3D:** Münzkörper und Riffelrand bleiben während des Spawns unverändert, nur das Positionieren/Herunterfallen erfolgt über die äußere Hülle. Keine 2D→3D-Umwandlung mehr.
-- **Magnet in echter CSS-3D-Schichtung:** mehrere räumlich getrennte Metall-/Lack-Ebenen (mit Schatten und 3D-Neigung), größer, weiter links oben und etwas aus dem Bildausschnitt gerückt. Freischaltung, Levels, Radius und Einsammeln bleiben erhalten.
-- **Hintere Ecken des Tisches:** 3D-Holzoberfläche lückenlos bis über die Ränder verlängert; keine dreieckigen Lücken an der Wand mehr.
-- **Neue Schreibtischlampe:** rechts oben mit metallischen Armen und warmem Schirm; ihr sanfter Lichtkreis ist die ×2-Zone (unveränderte Trefferlogik). Das gestrichelte Ziel wird durch die leuchtende Kontur ersetzt.
+**Optik und Animationen**
 
-## Installation
-Die `index.html` im GitHub-Pages-Repository durch diese Version ersetzen. Spielstand vorher optional in Einstellungen exportieren; bisherige Speicherstände bleiben kompatibel.
+- Der Magnet besteht nun aus einem **durchgehenden, glatten 3D-Körper** mit individuell beleuchteten roten und blauen Lackoberflächen und massiven Metallpolen. Die vielen sichtbaren Schichtlinien sind entfernt. Er bleibt links oben teilweise angeschnitten und behält sämtliche Freischaltungen, Level und Radien.
+- **Dunkler, geheimnisvoller Raum:** dezente Vignette, abgeschwächtes Umgebungslicht und kontrastreiches warmes Licht auf dem Holztisch.
+- Die Tischlampe steht mehr außerhalb des rechten Randes. Ein **sehr dezenter Lichtkegel** verläuft vom Leuchtmittel bis zur vorhandenen ×2-Zone; deren Kreis bildet exakt seinen Boden. Die Trefferlogik wurde nicht verändert.
+- **Geldmünzen verschwinden beim Einsammeln sofort.** Kein kurzer 2D-Zustand durch Schrumpf- oder Drehanimation. Magnet-Einzug verschiebt die äußere Münzposition und verändert den 3D-Körper nicht.
+
+**Installation:** Auf GitHub Pages die bestehende `index.html` ersetzen. Der bisherige Spielstand bleibt kompatibel. Vorher zur Sicherheit exportieren.
