@@ -1,14 +1,17 @@
-# FLIP v0.15 – Performance Update
+# FLIP v0.16 – Critical Effects & Mint
 
-Änderungen:
-- 3D-Kantensegmente: von bisher 80 je Münze auf 56 (Hauptmünze) / 28 (Bonusmünzen).
-- Auf schmalen Displays maximal 8 gleichzeitig dargestellte Bonusmünzen; weitere Münzen wirken weiterhin auf Gewinne, Streaks und Spielstand und werden mit `+N` angezeigt.
-- Alle Münzen werfen weiterhin in einer Runde; die nicht gezeichneten Münzen werden regelkonform mitberechnet.
-- Münzbewegungen animieren mit `transform` statt mit Layout-Properties `left/top`.
-- Leichtere Schattenanimationen ohne während des Wurfs animierte Blur-Filter.
-- Positionssuche ohne Hunderte temporäre Arrays pro Münze.
-- Versteckter Skill-Tree wird nicht pro Wurf zweimal neu aufgebaut.
-- Statistikansicht wird nur aktualisiert, wenn sie offen ist.
-- Keine Änderungen am Balancing oder Speicherformat. Spielstandschlüssel bleibt `flip-v0.1-save`.
+## Neu
 
-Upload: `index.html` im bestehenden GitHub-Repository ersetzen. Vorher Spielstand exportieren.
+- Kritische Würfe: Blitzanimation am jeweiligen Treffer, kurzer violetter Lichtimpuls, „ϟ CRITICAL ×10…“ und spezieller Elektro-Sound.
+- Neue Mint-Seite über das Glitzer-Icon im Header.
+- 5 Rahmen, 5 Materialien, 8 Symbole jeweils für Gewinn und Niete sowie 5 Auren. Alle sind sofort verfügbar.
+- Auswahl wird im bestehenden Spielstand (`flip-v0.1-save`) gespeichert und über JSON-Export/Import mitgenommen.
+- Bonusmünzen bleiben aus Gründen der Spielbarkeit silber/gold. Die veränderte Hauptmünze beeinflusst nicht die Chancen.
+
+## Installation
+
+Alte `index.html` in deinem GitHub Pages Repository durch die neue ersetzen. Zur Sicherheit zuvor über Einstellungen den Spielstand exportieren.
+
+## Hinweis
+
+Noch keine Unlock-Logik: jedes Cosmetic ist sofort frei verfügbar.
