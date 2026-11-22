@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#65412c"><meta name="description" content="FLIP – aus einer Münze entsteht mehr."><title>FLIP – v0.25</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#65412c"><meta name="description" content="FLIP – aus einer Münze entsteht mehr."><title>FLIP – v0.26</title>
 <style>
 :root{color-scheme:dark;--bg:#141619;--panel:#1d2024;--line:#30343a;--muted:#9299a2;--text:#f1f0ed;--gold:#e7b77b;--green:#91c7a5;--blue:#a0bddb;--orange:#f0a56c}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100dvh;-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;color:inherit;touch-action:manipulation}button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}button:disabled{cursor:default}button, .coin{user-select:none}main{width:min(100%,530px);margin:auto;padding:18px 19px calc(84px + env(safe-area-inset-bottom))}header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.brand{font-size:21px;font-weight:850;letter-spacing:6px}.version{font-size:10px;color:var(--muted);letter-spacing:.05em}.icon-button{background:var(--panel);border:1px solid var(--line);border-radius:12px;width:42px;height:42px;display:grid;place-items:center}.icon-button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.balance{text-align:center;margin:12px 0 19px}.eyebrow{text-transform:uppercase;font-size:10px;letter-spacing:2.1px;color:var(--muted);font-weight:650}.balance strong{display:block;font-size:clamp(33px,9vw,53px);line-height:1.12;color:var(--gold);letter-spacing:-1.8px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.metrics{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:12px 0}.metric{text-align:center;min-width:0}.metric+.metric{border-left:1px solid var(--line)}.metric span{display:block;color:var(--muted);font-size:11px}.metric strong{display:block;font-size:20px;margin:3px 0 0;font-variant-numeric:tabular-nums}.hot{color:var(--orange)}.arena{min-height:252px;display:flex;align-items:center;flex-direction:column;justify-content:center;padding:20px 0 13px;position:relative}.coin-button{padding:0;background:transparent;border:0;border-radius:50%;display:grid;place-items:center;width:164px;height:164px;position:relative;perspective:550px}.coin-button:disabled{opacity:1}.coin{--metal:#c48d61;--light:#f0ca9f;--dark:#835130;--rim:#9a623d;width:143px;height:143px;position:relative;transform-style:preserve-3d;transition:filter .2s;filter:drop-shadow(0 6px 0 var(--rim)) drop-shadow(0 12px 15px #0005)}.face{position:absolute;inset:0;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(145deg,var(--light),var(--metal) 42%,var(--metal) 72%,var(--rim));border:2px solid var(--light);backface-visibility:hidden;color:var(--dark);box-shadow:inset 0 0 0 5px var(--metal),inset 0 0 0 7px var(--light),inset 0 0 0 9px var(--metal);overflow:hidden}.face:before{content:'';position:absolute;inset:15px;border:1px dashed var(--dark);border-radius:50%;opacity:.45}.face svg{width:54%;height:54%;fill:currentColor;opacity:.88}.face b{font-size:56px;line-height:1;font-weight:850}.face small{font-size:9px;letter-spacing:3px;font-weight:800;margin-top:7px}.tails{transform:rotateX(180deg)}.coin.is-tails{transform:rotateX(180deg)}.coin-button.streak .coin{filter:drop-shadow(0 6px 0 var(--rim)) drop-shadow(0 0 20px #d88b4350)}.coin-button:active:not(:disabled){transform:scale(.97)}.bonus-label{color:var(--muted);font-size:11px;margin:17px 0 9px}.bonuses{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:100%}.bonus-slot{perspective:300px;position:relative}.mini{--metal:#97b2c9;--light:#d6e4ec;--dark:#50677e;--rim:#5b7b95;width:49px;height:49px;filter:drop-shadow(0 3px 0 var(--rim))}.mini .face{border-width:1px;box-shadow:inset 0 0 0 2px var(--metal),inset 0 0 0 3px var(--light)}.mini .face:before{inset:6px}.mini .face b{font-size:24px}.mini .face small{display:none}.bonus-slot.new{animation:spawn .32s ease-out both}.bonus-slot.lost{animation:vanish .28s ease-in both}.bonus-slot.saved:after{content:'✓';position:absolute;right:-4px;top:-7px;color:var(--green);font-size:15px;font-weight:bold}.more{align-self:center;color:var(--muted);font-size:12px}.result{text-align:center;min-height:48px;margin:8px 0 14px}.result strong{display:block;font-size:25px;line-height:1.2;font-variant-numeric:tabular-nums;color:var(--green)}.result strong.neutral{color:var(--muted);font-size:18px}.result p{margin:5px 0 0;color:var(--muted);font-size:12px;line-height:1.4}.flip{width:100%;border:0;border-radius:13px;background:var(--gold);color:#332214;font-size:15px;letter-spacing:3px;font-weight:850;padding:15px;box-shadow:0 3px 0 #9d744b}.flip:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #9d744b}.flip:disabled{opacity:.65}.shop{margin-top:25px}.section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 11px}.section-title h2{font-size:15px;margin:0}.section-title span{font-size:11px;color:var(--muted)}.upgrade{display:grid;grid-template-columns:39px minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:8px}.upgrade-icon{height:39px;width:39px;border-radius:10px;display:grid;place-items:center;background:#293747;color:var(--blue)}.upgrade-icon svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.upgrade[data-id=survival] .upgrade-icon{background:#293b32;color:var(--green)}.upgrade[data-id=protection] .upgrade-icon{background:#433327;color:var(--orange)}.upgrade h3{font-size:13px;margin:0 0 3px}.upgrade p{font-size:11px;color:var(--muted);margin:0;line-height:1.4}.upgrade .chance{color:var(--text);font-size:12px;font-weight:650;margin-top:4px}.buy{border:1px solid #735638;border-radius:9px;background:#3b2d22;color:var(--gold);padding:10px 8px;font-size:12px;min-width:68px;font-weight:750;font-variant-numeric:tabular-nums}.buy:disabled{border-color:var(--line);background:#25282d;color:#81868d}.locked{padding:11px 4px;font-size:11px;color:var(--muted);display:flex;gap:8px;align-items:center}.locked svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.7}.bottom{position:fixed;bottom:0;left:0;right:0;background:#191c20;border-top:1px solid var(--line);padding:7px 0 calc(7px + env(safe-area-inset-bottom));z-index:5}.nav-inner{margin:auto;max-width:530px;display:flex;justify-content:space-around}.nav{flex:1;background:none;border:0;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11px;padding:6px}.nav svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}.nav.active{color:var(--gold)}.page[hidden]{display:none}.page-title{font-size:25px;margin:20px 0 4px;letter-spacing:-.5px}.sub{margin:0 0 20px;color:var(--muted);font-size:13px}.stat-group{background:var(--panel);border:1px solid var(--line);border-radius:15px;margin-bottom:13px;padding:4px 14px}.stat{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;font-size:13px}.stat+.stat{border-top:1px solid var(--line)}.stat span{color:var(--muted)}.stat strong{font-variant-numeric:tabular-nums;text-align:right;overflow-wrap:anywhere}.settings-btn{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:9px;text-align:left;font-size:14px}.settings-btn.danger{color:#e69b98}.note{font-size:12px;line-height:1.55;color:var(--muted)}.rules{font-size:12px;color:var(--muted);line-height:1.55;border-top:1px solid var(--line);margin-top:17px;padding-top:13px}.rules summary{cursor:pointer;color:var(--text)}.rules p{margin:8px 0}.save-error{color:#f4b49b;font-size:12px;margin:6px 0}.toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%);background:#30363b;color:var(--text);padding:10px 15px;border-radius:10px;font-size:12px;z-index:10;box-shadow:0 4px 24px #0005;max-width:90%;text-align:center}.toast[hidden]{display:none}@keyframes spawn{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}@keyframes vanish{to{opacity:0;transform:scale(.1)}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}@media(max-width:350px){main{padding-left:12px;padding-right:12px}.upgrade{gap:7px;padding:9px}.metric span{font-size:10px}.buy{min-width:60px}}
 
@@ -398,7 +398,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 @media(prefers-reduced-motion:reduce){.tabletop .reward-slot.spawn .reward-coin{animation:none}}
 
 
-/* FLIP v0.25 — oblique wooden desk and the first physical desk upgrade */
+/* FLIP v0.26 — oblique wooden desk and the first physical desk upgrade */
 .room .wall{height:20%;background:radial-gradient(ellipse at 13% 0%,#d5aa7830,transparent 65%),repeating-linear-gradient(92deg,#0000 0 72px,#0000000a 73px 74px),linear-gradient(180deg,#584940,#3a2c27)}
 .room .skirting{top:16.7%;height:1.6%;transform:skewY(1.8deg);transform-origin:left center;box-shadow:0 4px 10px #190e0877}
 .room .desk{top:17.5%;bottom:9%;left:-27%;right:-25%;clip-path:polygon(20% 0,82% 3%,100% 100%,1% 95%);transform:perspective(1050px) rotateZ(-2deg) skewX(-3.6deg);transform-origin:50% 55%;box-shadow:none;background-position:center;background-size:cover;filter:brightness(1.05)}
@@ -445,7 +445,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 @media(prefers-reduced-motion:reduce){.tabletop .reward-slot.magnet-pulled .reward-coin{animation-duration:.01ms!important}}
 
 
-/* FLIP v0.25 — Straight-on, symmetric desk. Only *thickness* is enlarged. */
+/* FLIP v0.26 — Straight-on, symmetric desk. Only *thickness* is enlarged. */
 .room .wall{height:17%;background:radial-gradient(ellipse at 25% 0%,#d5aa7830,transparent 65%),repeating-linear-gradient(90deg,#0000 0 72px,#0000000a 73px 74px),linear-gradient(180deg,#584940,#3a2c27)}
 .room .skirting{top:16.5%;height:1.7%;transform:none;clip-path:none;box-shadow:0 3px 9px #160c086e;background:linear-gradient(180deg,#9b7756 0%,#714c33 28%,#3e281b 72%,#261912)}
 /* The front edge is the actual termination of the tabletop: no skew or rotation. */
@@ -487,10 +487,53 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 /* Do not change the layout of other UI panels, target zone or gameplay area. */
 @media(max-width:380px){.tabletop .magnet-device{left:18%;top:16%;width:95px;height:95px}}
 @media(max-height:600px){.room .desk{top:18%;bottom:13%}.room .desk-edge{top:87%;height:7.2%}.room .skirting{top:16.5%}.tabletop .magnet-device{top:19%;width:94px;height:94px}}
+
+/* FLIP v0.26 — A physically projected room/desk. The interactive tabletop stays
+   screen-aligned: no skew in hit targets, physics or heads-up display. */
+.room{perspective:150dvh;perspective-origin:50% 20%;background:radial-gradient(ellipse 86% 75% at 33% 26%,#61534a 0%,#403832 44%,#252321 82%,#171718 100%);}
+.room:before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:linear-gradient(103deg,#e9b57408,transparent 46%,#08070728 98%);}
+.room .wall{height:21%;background:radial-gradient(ellipse 70% 90% at 25% 5%,#ddc19b32,transparent 80%),repeating-linear-gradient(90deg,transparent 0 112px,#17100c1a 113px 114px),linear-gradient(180deg,#574a43 0%,#453930 65%,#372d29 100%);box-shadow:inset 0 -16px 24px #150c0b55;}
+.room .wall:before,.room .wall:after{content:'';position:absolute;inset:0;pointer-events:none;}
+.room .wall:before{clip-path:none;background:linear-gradient(90deg,#201a1a6b,transparent 14%,transparent 82%,#21171489);}
+.room .wall:after{clip-path:none;background:radial-gradient(ellipse at 23% 10%,#f4e1bd13,transparent 70%);}
+.room .skirting{top:19.9%;height:2.1%;background:linear-gradient(180deg,#231a15 0%,#ab8059 10%,#c49a72 19%,#785638 35%,#503827 68%,#33251d 100%);transform:none;border-top:1px solid #bfa18255;box-shadow:0 5px 14px #12090792;}
+.room .skirting:after{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(90deg,#160e0966,transparent 30%,transparent 75%,#160e0966);}
+.room .floor{inset:20.3% 0 0;background:repeating-linear-gradient(94deg,transparent 0 88px,#140e0b52 89px 91px),linear-gradient(178deg,#33281f,#231a19 55%,#171516);transform:none;}
+/* The whole wooden top is pitched backward in CSS 3D (rotateX only), not rotated sideways. */
+.room .desk{top:20%;bottom:31.7%;left:-27%;right:-27%;width:auto;transform:perspective(142dvh) rotateX(22deg) scaleY(1.09);transform-origin:50% 0%;clip-path:polygon(19% 0,81% 0,100% 100%,0 100%);background-position:center center;background-size:cover;filter:brightness(1.035);box-shadow:none;}
+.room .desk:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 75% at 26% 28%,#ffe2b021,transparent 78%),linear-gradient(90deg,#0b070625,transparent 12%,transparent 83%,#1007053c),linear-gradient(180deg,#09060494 0%,#1d10065c 5%,transparent 18%,transparent 67%,#13090633 90%,#e6a96f18 100%);}
+.room .desk:after{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 128px,#1b100c12 130px 132px,transparent 135px 196px),linear-gradient(180deg,transparent 0 28.3%,#130a071f 28.5%,#dcb08312 28.7%,transparent 29.1%,transparent 58%,#160c0926 58.25%,#c99a6f14 58.5%,transparent 58.85%,transparent 86%,#160c0922 86.15%,transparent 86.55%);mix-blend-mode:multiply;}
+/* Deep solid slab, with a bevel on its near edge and continuous underside. */
+.room .desk-edge{top:86.8%;height:7.6%;left:-2%;right:-2%;transform:none;clip-path:none;background:linear-gradient(180deg,#56321c 0%,#e0ac77 2%,#ffdb9e 4%,#c18c56 7%,#865632 10%,#684326 23%,#52331e 48%,#382316 77%,#211914 100%);box-shadow:inset 0 -8px 15px #190e0bbb,0 13px 23px #110906aa;}
+.room .desk-edge:before{content:'';position:absolute;inset:6% 0 3%;background:repeating-linear-gradient(90deg,transparent 0 103px,#25140918 104px 106px,transparent 110px 130px),linear-gradient(90deg,#0b06054f,transparent 15%,transparent 80%,#09050555);opacity:.82;}
+.room .desk-edge:after{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#bc8959,#ffe2ad 29%,#efbd87 61%,#a26e43);box-shadow:0 2px 3px #2b15097a;}
+.room .desk-under{position:absolute;left:2%;right:2%;top:94%;height:2.4%;background:linear-gradient(#24170f,#160e0b);box-shadow:0 10px 18px #0d0a08cf;z-index:0;}
+.room .desk-under:after{content:'';position:absolute;inset:1px 4% auto;height:3px;border-radius:0 0 3px 3px;background:#96623a40;}
+.room .desk-leg{top:94%;bottom:-11%;left:9%;width:11%;transform:none;background:linear-gradient(90deg,#190d09 0%,#68452d 8%,#996c45 19%,#634329 46%,#39241a 84%,#241710 100%);box-shadow:6px 2px 17px #080705aa;}
+.room .desk-leg.right{left:auto;right:9%;transform:none;background:linear-gradient(90deg,#24160e 0%,#533624 23%,#936543 52%,#583821 88%,#190e0a 100%);box-shadow:-6px 2px 17px #080705aa;}
+.room .desk-leg:before{content:'';position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(#bd8c5b55,#2f1b0e);}
+/* Soft occlusion of the tabletop against the wall, without baking shadows into coins. */
+.room:after{background:radial-gradient(ellipse 95% 85% at 38% 31%,transparent 36%,#100c0960 100%);}
+/* Coins begin as complete 3D solids. A small fall does not rotate their face flat. */
+.tabletop .reward-slot.spawn .reward-coin{animation:cash-solid-land-v026 .33s cubic-bezier(.18,.9,.25,1.05) both;animation-delay:0ms!important;}
+@keyframes cash-solid-land-v026{0%{opacity:1;transform:translateY(-17px) rotateX(33deg) rotateZ(-8deg) scale(.97)}67%{opacity:1;transform:translateY(2px) rotateX(33deg) rotateZ(-8deg) scale(1.025)}100%{opacity:1;transform:translateY(0) rotateX(33deg) rotateZ(-8deg) scale(1)}}
+/* Tilt does not change when the magnet pulls a coin either. */
+@keyframes magnet-pull-v024{0%{opacity:1;transform:rotateX(33deg) rotateZ(-8deg) translate(0,0) scale(1)}76%{opacity:1}100%{opacity:0;transform:translate(var(--magnet-pull-x),var(--magnet-pull-y)) rotateX(33deg) rotateZ(-8deg) scale(.22)}}
+/* Large horseshoe with real visible enamel/metal thickness. Poles point toward the
+   near edge of the table and sit on the wood, with contact shadows under the tips. */
+.tabletop .magnet-device{left:22%;top:19%;width:clamp(170px,31vw,210px);height:clamp(155px,29vw,190px);transform:translate(-50%,-50%);filter:none;perspective:620px;overflow:visible;}
+.tabletop .magnet-device .magnet-art{width:100%;height:100%;overflow:visible;transform:rotate(-10deg) rotateX(37deg);transform-origin:50% 50%;filter:drop-shadow(5px 9px 4px #160b09a1);}
+.tabletop .magnet-device:active .magnet-art{transform:rotate(-10deg) rotateX(37deg) scale(.96);}
+.tabletop .magnet-device.locked .magnet-art{filter:saturate(.70) brightness(.91) drop-shadow(5px 8px 4px #160b09a0);}
+.tabletop .magnet-device:not(.locked) .magnet-art{filter:drop-shadow(5px 9px 4px #160b09a1);}
+.tabletop .magnet-device.active .magnet-art{filter:drop-shadow(5px 9px 4px #160b09a1) drop-shadow(0 0 7px #73c8e83d);}
+.tabletop .magnet-lock,.tabletop .magnet-level{right:-3px;bottom:4px;z-index:1;}
+@media(max-width:380px){.tabletop .magnet-device{left:23%;top:19%;width:148px;height:140px;}}
+@media(max-height:600px){.room .desk{top:20%;bottom:31.7%}.room .desk-edge{top:86.8%}.room .skirting{top:19.9%}.tabletop .magnet-device{top:21%;width:112px;height:108px;}}
 </style>
 </head>
 <body>
-<div id="critFlash" class="critical-flash" aria-hidden="true"></div><div class="room" aria-hidden="true"><div class="wall"></div><div class="skirting"></div><div class="floor"></div><div class="desk-leg"></div><div class="desk-leg right"></div><div class="desk-edge"></div><div class="desk"></div></div>
+<div id="critFlash" class="critical-flash" aria-hidden="true"></div><div class="room" aria-hidden="true"><div class="wall"></div><div class="skirting"></div><div class="floor"></div><div class="desk-leg"></div><div class="desk-leg right"></div><div class="desk-under"></div><div class="desk-edge"></div><div class="desk"></div></div>
 <main>
 <header><div class="header-left"><button class="icon-button" id="back" aria-label="Zurück zum Spiel" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6M8 12h12"/></svg></button><div class="balance" aria-label="Coins"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="6"/><path d="M12 8v8m-2-6 2-2"/></svg><strong id="balance">0</strong></div></div><div class="header-actions"><button class="icon-button nav" data-page="mint" aria-label="Münze gestalten" title="Mint · Münzdesigns"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.3 6.7L21 12l-6.7 2.3L12 21l-2.3-6.7L3 12l6.7-2.3L12 3Z"/><path d="M19 2v4m-2-2h4"/></svg></button><button class="icon-button" id="sound" aria-label="Ton umschalten" title="Ton"></button><button class="icon-button nav" data-page="stats" aria-label="Statistiken" title="Statistiken"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M6 16v-5m6 5V5m6 11V9"/></svg></button><button class="icon-button nav" data-page="settings" aria-label="Einstellungen" title="Einstellungen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 3-.7 2.5-2 .9L5 5.2 3 8.8l1.8 1.8v2.8L3 15.2l2 3.6 2.3-1.2 2 .9L10 21h4l.7-2.5 2-.9 2.3 1.2 2-3.6-1.8-1.8v-2.8L21 8.8l-2-3.6-2.3 1.2-2-.9L14 3Z"/><circle cx="12" cy="12" r="3"/></svg></button></div></header>
 <div id="testIndicator" class="test-indicator" hidden>TESTMODUS – nicht gespeichert</div><div id="saveError" class="save-error" hidden>Lokaler Speicher nicht verfügbar. Exportiere deinen Spielstand in den Einstellungen.</div>
@@ -499,52 +542,59 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 <div id="tabletop" class="tabletop">
  <div id="magnetRange" class="magnet-range" aria-hidden="true"><span class="magnet-range-label" id="magnetRangeLabel"></span></div>
  <button type="button" id="magnetButton" class="magnet-device locked" aria-label="Magnet freischalten" aria-haspopup="dialog" aria-controls="magnetPanel" aria-expanded="false" title="Magnet öffnen">
-   <svg class="magnet-art" viewBox="0 0 150 150" aria-hidden="true">
+   <svg class="magnet-art" viewBox="0 0 180 170" aria-hidden="true">
      <defs>
-       <linearGradient id="redMagnetPaint" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#ffaba0"/><stop offset=".18" stop-color="#eb5752"/><stop offset=".56" stop-color="#b63437"/><stop offset=".88" stop-color="#98272e"/><stop offset="1" stop-color="#6c1f2a"/></linearGradient>
-       <linearGradient id="blueMagnetPaint" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#a8edff"/><stop offset=".16" stop-color="#3a9fc9"/><stop offset=".49" stop-color="#1b6390"/><stop offset=".84" stop-color="#17486a"/><stop offset="1" stop-color="#12364d"/></linearGradient>
-       <linearGradient id="steelMagnet" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4c5660"/><stop offset=".14" stop-color="#b0babd"/><stop offset=".36" stop-color="#f1f0e9"/><stop offset=".57" stop-color="#a3afb4"/><stop offset=".82" stop-color="#f3e6cf"/><stop offset="1" stop-color="#485d6a"/></linearGradient>
-       <linearGradient id="sideMagnet" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5f2929"/><stop offset="1" stop-color="#2f1b22"/></linearGradient>
-       <filter id="magnetContact" x="-30%" y="-35%" width="180%" height="190%"><feGaussianBlur stdDeviation="5"/></filter>
+       <linearGradient id="magnetRed26" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#ffb29d"/><stop offset=".18" stop-color="#fa5e56"/><stop offset=".45" stop-color="#d03738"/><stop offset=".77" stop-color="#a8222e"/><stop offset="1" stop-color="#771928"/></linearGradient>
+       <linearGradient id="magnetBlue26" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#b5edff"/><stop offset=".17" stop-color="#51b5dc"/><stop offset=".48" stop-color="#2277a4"/><stop offset=".77" stop-color="#16547e"/><stop offset="1" stop-color="#0a3457"/></linearGradient>
+       <linearGradient id="magnetSteel26" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#515961"/><stop offset=".12" stop-color="#a5b0b3"/><stop offset=".35" stop-color="#f9f8eb"/><stop offset=".53" stop-color="#adbfca"/><stop offset=".7" stop-color="#e1e0d2"/><stop offset="1" stop-color="#526679"/></linearGradient>
+       <linearGradient id="magnetSideRed26" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#9a3333"/><stop offset="1" stop-color="#411b26"/></linearGradient>
+       <linearGradient id="magnetSideBlue26" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#20668a"/><stop offset="1" stop-color="#0c263f"/></linearGradient>
+       <filter id="magnetGround26" x="-30%" y="-30%" width="170%" height="200%"><feGaussianBlur stdDeviation="5.5"/></filter>
      </defs>
-     <!-- Contact shadow on the wood, NOT a floating icon. -->
-     <path d="M35 28V76C35 111 55 122 77 122C101 122 116 105 116 76V28" transform="translate(7 13)" stroke="#120c0a" stroke-width="33" stroke-linecap="butt" fill="none" opacity=".62" filter="url(#magnetContact)"/>
-     <!-- The lower metal casting is offset downward, exposing 13px of physical thickness. -->
-     <g transform="translate(2 12)" fill="none" stroke-linecap="butt" stroke-linejoin="round">
-       <path d="M35 28V76C35 107 52 122 77 122" stroke="#321b20" stroke-width="33"/>
-       <path d="M77 122C103 122 116 106 116 76V28" stroke="#142b38" stroke-width="33"/>
-       <path d="M35 28V76C35 107 52 122 77 122" stroke="#922f32" stroke-width="27"/>
-       <path d="M77 122C103 122 116 106 116 76V28" stroke="#164b6d" stroke-width="27"/>
+     <!-- The U bends away from the camera, and the two magnetic poles rest on the wooden table. -->
+     <path d="M48 125V79C48 51 65 34 90 34C115 34 132 51 132 79V125" fill="none" stroke="#140b09" stroke-width="39" stroke-linejoin="round" transform="translate(4 16)" opacity=".63" filter="url(#magnetGround26)"/>
+     <ellipse cx="48" cy="148" rx="21" ry="6" fill="#100907" opacity=".56" filter="url(#magnetGround26)"/>
+     <ellipse cx="132" cy="148" rx="21" ry="6" fill="#100907" opacity=".56" filter="url(#magnetGround26)"/>
+     <!-- Extruded body: physical thickness visible behind the enamel upper surface. -->
+     <g transform="translate(2 12)" fill="none" stroke-width="35" stroke-linejoin="round" stroke-linecap="butt">
+       <path d="M48 125V79C48 51 65 34 90 34" stroke="#351922"/>
+       <path d="M90 34C115 34 132 51 132 79V125" stroke="#0b2a40"/>
+       <path d="M48 125V79C48 51 65 34 90 34" stroke="url(#magnetSideRed26)" stroke-width="30"/>
+       <path d="M90 34C115 34 132 51 132 79V125" stroke="url(#magnetSideBlue26)" stroke-width="30"/>
      </g>
-     <!-- Short beveled side lip separates the casing from the top enamel. -->
-     <g transform="translate(.5 6.5)" fill="none" stroke-linejoin="round" stroke-linecap="butt">
-       <path d="M35 28V76C35 107 52 122 77 122" stroke="#e17c67" stroke-width="29"/>
-       <path d="M77 122C103 122 116 106 116 76V28" stroke="#428eb2" stroke-width="29"/>
+     <!-- Fine bevel along the top lip, lit from upper left. -->
+     <g transform="translate(.8 6)" fill="none" stroke-linejoin="round" stroke-linecap="butt" stroke-width="31">
+       <path d="M48 125V79C48 51 65 34 90 34" stroke="#ff9177"/>
+       <path d="M90 34C115 34 132 51 132 79V125" stroke="#5ca9c7"/>
      </g>
-     <!-- Actual top surface. -->
      <g fill="none" stroke-linejoin="round" stroke-linecap="butt">
-       <path d="M35 28V76C35 107 52 122 77 122" stroke="#532027" stroke-width="31"/>
-       <path d="M77 122C103 122 116 106 116 76V28" stroke="#15364c" stroke-width="31"/>
-       <path d="M35 28V76C35 107 52 122 77 122" stroke="url(#redMagnetPaint)" stroke-width="27"/>
-       <path d="M77 122C103 122 116 106 116 76V28" stroke="url(#blueMagnetPaint)" stroke-width="27"/>
-       <path d="M28.6 50V77C28.6 106 47 113 63 114" stroke="#ffb1a6" opacity=".7" stroke-width="2.7" stroke-linecap="round"/>
-       <path d="M89 115C107 108 109.8 89 109.8 77V50" stroke="#98dbef" opacity=".55" stroke-width="2.3" stroke-linecap="round"/>
-       <path d="M42.6 55V82" stroke="#77272a" opacity=".8" stroke-width="3" stroke-linecap="round"/>
-       <path d="M123.5 55V82" stroke="#0b405c" opacity=".8" stroke-width="3" stroke-linecap="round"/>
+       <path d="M48 125V79C48 51 65 34 90 34" stroke="#5c1b24" stroke-width="35"/>
+       <path d="M90 34C115 34 132 51 132 79V125" stroke="#11354d" stroke-width="35"/>
+       <path d="M48 125V79C48 51 65 34 90 34" stroke="url(#magnetRed26)" stroke-width="30"/>
+       <path d="M90 34C115 34 132 51 132 79V125" stroke="url(#magnetBlue26)" stroke-width="30"/>
+       <path d="M38 111V80C38 56 57 24 85 25" stroke="#ffd0ba" stroke-width="2.8" opacity=".63"/>
+       <path d="M101 28C125 34 124 55 124 78V106" stroke="#aee3f0" stroke-width="2.5" opacity=".5"/>
+       <path d="M59 81V105" stroke="#661e2b" stroke-width="2.9" opacity=".44"/>
+       <path d="M143 82V106" stroke="#11364c" stroke-width="2.5" opacity=".5"/>
      </g>
-     <!-- Shiny iron pole caps, with physically visible side ends. -->
-     <path d="M21.5 27V47H48.5V27" transform="translate(2 9)" fill="#515357" stroke="#343739" stroke-width="2"/>
-     <path d="M102.5 27V47H129.5V27" transform="translate(2 9)" fill="#384f5a" stroke="#273f4e" stroke-width="2"/>
-     <path d="M21.5 27H48.5V47H21.5Z" fill="url(#steelMagnet)" stroke="#777b7c" stroke-width="1.7"/>
-     <path d="M102.5 27H129.5V47H102.5Z" fill="url(#steelMagnet)" stroke="#6e7d82" stroke-width="1.7"/>
-     <path d="M23.5 30.5H46.5M104.5 30.5H127.5" stroke="#fffdf2" stroke-width="1.9" opacity=".78"/>
-     <path d="M24 46H46M105 46H127" stroke="#465c69" stroke-width="1.8" opacity=".5"/>
-     <path d="M32 68V83M113 62V80" stroke="#ffffff" stroke-width="1.2" opacity=".22" stroke-linecap="round"/>
+     <!-- Vertical brushed iron pole shoes and lower pole faces touching the desk. -->
+     <g>
+       <path d="M31 111H65V136Q48 142 31 135Z" fill="#5c6269" stroke="#343840" stroke-width="2"/>
+       <path d="M115 111H149V135Q132 142 115 136Z" fill="#405965" stroke="#2c404b" stroke-width="2"/>
+       <path d="M31 111H65V133H31Z" fill="url(#magnetSteel26)" stroke="#a4b6ba" stroke-width="1.5"/>
+       <path d="M115 111H149V133H115Z" fill="url(#magnetSteel26)" stroke="#a4b6ba" stroke-width="1.5"/>
+       <path d="M31 133Q48 141 65 133V138Q48 147 31 138Z" fill="#71838d" stroke="#3c515a" stroke-width="1.5"/>
+       <path d="M115 133Q132 141 149 133V138Q132 147 115 138Z" fill="#596e7b" stroke="#354e5d" stroke-width="1.5"/>
+       <path d="M34 114H63M118 114H147" stroke="#fffdf2" stroke-width="2" opacity=".78"/>
+       <path d="M34 131H62M118 131H146" stroke="#516273" stroke-width="1.2" opacity=".4"/>
+       <ellipse cx="48" cy="141" rx="14" ry="3" fill="#e5edeb" opacity=".28"/>
+       <ellipse cx="132" cy="141" rx="14" ry="3" fill="#e5edeb" opacity=".23"/>
+     </g>
    </svg>
    <span class="magnet-lock" id="magnetLock" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
    <span class="magnet-level" id="magnetLevelLabel" hidden>LV 1</span>
  </button>
- <div class="target-counter" aria-live="off"><span class="target-counter-icon">◎</span><span>PRÄGEPLATTE <b>×2</b></span><small id="targetProgress" hidden></small></div>
+ <span id="targetProgress" hidden></span>
  <div id="targetDevice" class="target-device" role="img" aria-label="Goldene ×2-Zielzone: Triff sie mit der ganzen Kupfermünze für doppelten Gewinn."><span class="target-engraving">×2</span></div>
  <svg id="aimLine" class="aim-line" aria-hidden="true"><path id="aimArc" d=""/></svg><div id="aimMarker" class="aim-marker" aria-hidden="true"><span>+</span></div>
  <div id="targetFeedback" class="target-feedback" aria-live="polite"></div>
@@ -578,7 +628,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
   <p class="mint-note">Nur Optik: Skins ändern weder Münzwerte noch Wahrscheinlichkeiten. Bonusmünzen behalten vorerst ihre Spielmaterialien. Die Freischaltlogik folgt später.</p>
 </section>
 <section id="stats" class="page" hidden><h1 class="page-title">Statistiken</h1><p class="sub">Jeder Wurf zählt.</p><div id="statContent"></div></section>
-<section id="settings" class="page" hidden><h1 class="page-title">Einstellungen</h1><p class="sub">Dein Spiel, dein Fortschritt.</p><button class="settings-btn" id="toggleSound"></button><button class="settings-btn" id="export">Spielstand exportieren</button><button class="settings-btn" id="import">Spielstand importieren</button><input id="importFile" type="file" accept="application/json,.json" hidden><button class="settings-btn danger" id="reset">Spielstand zurücksetzen</button><p class="note">Der Fortschritt wird automatisch in diesem Browser gespeichert. Beim Wechsel des Geräts oder der Webadresse kannst du deinen exportierten Spielstand importieren. FLIP v0.25 · 3D-Magnet und Tischkante · Keine Konten, keine externen Dienste.</p><details class="rules"><summary>So funktioniert FLIP v0.25</summary><p>Berühre die Kupfermünze und schnippe sie in einer kurzen, schnellen Bewegung in Richtung der goldenen ×2-Zone. Halten oder langsames Ziehen zählt nicht. Die Münze kehrt nach dem Wurf an ihren Startpunkt zurück. Krone und Totenkopf bleiben unabhängig von der Wurfstärke 50/50.</p><p>Bei Gewinn erscheinen kleine 3D-Silber- und Goldmünzen auf dem Tisch. Sammle sie durch Antippen oder indem du mit dem Finger über sie streichst. Erst das Einsammeln erhöht dein Guthaben. Die ×2-Zone ist nur wenig größer als die Kupfermünze; sie muss fast vollständig im Kreis landen, um den Bonus zu erhalten.</p><p>Diese Version ist ein Test der Wurf- und Sammelmechanik. Die alten Bonusmünzen-Verbesserungen sind noch im Skill-Tree, wirken aber nicht mehr auf werfbare Bonusmünzen. Bestehende Spielstände bleiben verwendbar.</p></details></section>
+<section id="settings" class="page" hidden><h1 class="page-title">Einstellungen</h1><p class="sub">Dein Spiel, dein Fortschritt.</p><button class="settings-btn" id="toggleSound"></button><button class="settings-btn" id="export">Spielstand exportieren</button><button class="settings-btn" id="import">Spielstand importieren</button><input id="importFile" type="file" accept="application/json,.json" hidden><button class="settings-btn danger" id="reset">Spielstand zurücksetzen</button><p class="note">Der Fortschritt wird automatisch in diesem Browser gespeichert. Beim Wechsel des Geräts oder der Webadresse kannst du deinen exportierten Spielstand importieren. FLIP v0.26 · Räumlicher Schreibtisch · Keine Konten, keine externen Dienste.</p><details class="rules"><summary>So funktioniert FLIP v0.26</summary><p>Berühre die Kupfermünze und schnippe sie in einer kurzen, schnellen Bewegung in Richtung der goldenen ×2-Zone. Halten oder langsames Ziehen zählt nicht. Die Münze kehrt nach dem Wurf an ihren Startpunkt zurück. Krone und Totenkopf bleiben unabhängig von der Wurfstärke 50/50.</p><p>Bei Gewinn erscheinen kleine 3D-Silber- und Goldmünzen auf dem Tisch. Sammle sie durch Antippen oder indem du mit dem Finger über sie streichst. Erst das Einsammeln erhöht dein Guthaben. Die ×2-Zone ist nur wenig größer als die Kupfermünze; sie muss fast vollständig im Kreis landen, um den Bonus zu erhalten.</p><p>Diese Version ist ein Test der Wurf- und Sammelmechanik. Die alten Bonusmünzen-Verbesserungen sind noch im Skill-Tree, wirken aber nicht mehr auf werfbare Bonusmünzen. Bestehende Spielstände bleiben verwendbar.</p></details></section>
 </main>
 <div id="critBanner" class="critical-banner" aria-live="polite" aria-atomic="true" hidden></div><div class="toast" id="toast" role="status" hidden></div>
 <script id="engine">
