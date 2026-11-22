@@ -1,50 +1,42 @@
-# FLIP v0.13 — Upgrade-Tree & 20 Skills
+# FLIP v0.14 – Upgrade-Limits & Wischsteuerung
 
-## Installation
+**Installation:** Im GitHub-Repository die alte `index.html` durch die neue ersetzen. Bestehender Spielstand bleibt erhalten. Vorher optional Backup unter Einstellungen → Exportieren.
 
-Ersetze in deinem GitHub-Repository einfach die bisherige `index.html` durch die neue Datei. GitHub Pages veröffentlicht die neue Version automatisch. Der lokale Spielstand aus v0.1 bis v0.12 bleibt über den unveränderten Speicherschlüssel `flip-v0.1-save` erhalten. Exportiere zur Sicherheit vor der Aktualisierung deinen Spielstand unter **Einstellungen → Spielstand exportieren**.
+## Alle neuen maximalen Level
 
-## Das ist neu
+| Bereich | Skill | Maximales Level | Effekt bei MAX |
+|---|---|---:|---|
+| Vermehrung | Duplication | 50 | 50 % Basis-Chance (Streak-Bonus greift weiterhin; tatsächliche Chance wird bei 95 % gedeckelt) |
+| Vermehrung | Twin Spawn | 20 | 20 % |
+| Vermehrung | Chain Reaction | 15 | 15 % |
+| Vermehrung | Triple Spawn | 10 | 10 % |
+| Vermehrung | Golden Coin | 10 | 10 % |
+| Vermehrung | Golden Touch | 5 | 5 % |
+| Überleben | Survival | 30 | 30 % |
+| Überleben | Second Chance | 20 | 20 % |
+| Überleben | Revival | 5 | 5 % |
+| Überleben | Memory | 25 | 25 % |
+| Streaks | Streak Protection | 20 | 20 % |
+| Streaks | Streak Skip | 5 | 5 % |
+| Streaks | Hot Boost | 10 | +50 % Ertrag |
+| Streaks | Last Flame | 30 | 30 % |
+| Streaks | Cold Spawn | 20 | +40 % Extra-Spawnchance |
+| Streaks | Comeback Boost | 10 | +10 Multiplikator |
+| Spezial | Fast Flip | 15 | −75 % Wurfzeit |
+| Spezial | Coin Value | 5 | +5 Basis-Coins |
+| Spezial | Critical Flip | 5 | 5 % |
+| Spezial | Critical Power | 10 | ×20 Krit-Multiplikator |
 
-- **20 vollständig funktionierende Upgrades**, davon **11 neu**.
-- **Überarbeitete Preise**: jedes Upgrade besitzt einen eigenen Startpreis und eine eigene Preissteigerung.
-- **Verzweigter Tree** mit vier Pfaden (Vermehrung, Überleben, Streaks und Spezial) und farbigen, kreisförmigen Levelanzeigen.
-- **Schnellnavigation** zwischen den Pfaden, verschiebbare und zoombare Karte, Detailfenster pro Skill.
-- **Testmodus**, um sofort alle Upgrades ausprobieren zu können — auch ohne ihre Freischaltbedingungen erfüllen zu müssen.
-- Weiterhin das 3D-Holztisch-Design, dieselbe Wischsteuerung, das Comeback-System und kompatible Spielstände.
+## Neue Steuerung
 
-## Neue Skills und ihre Funktion
+- Über die ganze Spielfläche wischen: Alle liegenden Münzen werden gleichzeitig geworfen.
+- **Kräftiger/weiterer Wisch:** Mehr vollständige Drehungen, **aber gleichbleibende Flughöhe und Wurfdauer**.
+- Basiswurfzeit: 2 Sekunden, auf allen Münzen gleich. Nur Fast Flip verringert sie (auf minimal 0,5 Sekunden).
+- Wischstärke verändert die Ergebniswahrscheinlichkeit nicht (weiterhin 50:50).
+- Während des Wurfs ist der nächste Wisch gesperrt; neue Bonusmünzen landen vor der nächsten Runde.
 
-### Vermehrung
-- **Chain Reaction**: Auch Bonusmünzen können bei ihrem erfolgreichen Wurf neue Bonusmünzen erzeugen (1 Prozentpunkt/Level; max. 25 %).
-- **Triple Spawn**: Wenn Twin Spawn auslöst, kann zusätzlich eine dritte Münze erscheinen (1 Prozentpunkt/Level; max. 15 %).
-- **Golden Touch**: Eine erfolgreiche Silbermünze kann sich dauerhaft in Gold verwandeln; ihre Serie bleibt erhalten (1 Prozentpunkt/Level; max. 5 %). Der höhere Basiswert gilt ab dem folgenden Wurf.
+## Spielstände
 
-### Überleben
-- **Revival**: Nach gescheitertem Survival kann eine Münze zurückkehren, allerdings mit zurückgesetzter Serie (1 Prozentpunkt/Level; max. 10 %).
-- **Memory**: Eine durch Survival gerettete Münze kann ihre Serie behalten (1 Prozentpunkt/Level; max. 25 %).
+Wenn ein vorhandener Spielstand Level oberhalb der neuen Limits enthält, werden die Level bei der ersten Ladung auf das jeweilige neue Maximum gesenkt. Für die überzähligen Level wird einmalig anhand der bisherigen Upgrade-Preiskurve eine Coin-Gutschrift berechnet. Die Erstattung ist eine Annäherung an die früher gezahlten Preise; exakte Kaufhistorien sind nicht gespeichert.
 
-### Streaks
-- **Hot Boost**: Ab einer 2er-Kronenserie +5 % Ertrag pro Level für Haupt- und Bonusmünzen (max. +100 %). Bruchteile werden intern gesammelt, damit auch kleine Level lohnen.
-- **Last Flame**: Falls Protection nicht auslöst, kann die positive Serie halbiert statt auf null gesetzt werden (1 Prozentpunkt/Level; max. 10 %).
-- **Cold Spawn**: Bei der 3er- und 4er-Totenkopfserie gibt es pro Level +2 % Chance auf eine zusätzliche Bonusmünze (max. +50 %).
-- **Comeback Boost**: Erhöht den einmaligen Multiplikator des nächsten erfolgreichen Hauptmünzenwurfs nach mindestens 5 Totenköpfen um 1 je Level (max. +10).
-
-### Spezial
-- **Coin Value**: Erhöht den Basiswert der Hauptmünze um +1 Coin pro Level (max. +10).
-- **Critical Power**: Erhöht den Critical-Multiplikator von ×10 bis maximal ×20 (+1 pro Level).
-
-## Testmodus — sofort alle Skills testen
-
-1. Öffne den **Upgrade Tree** unten.
-2. Tippe oben auf **Testmodus**.
-3. Du bekommst ein temporäres Testguthaben. Alle 20 Fähigkeiten sind sofort verfügbar.
-4. Tippe auf einen Skill und verwende **Test: +1 Level** oder **Im Test auf MAX setzen**.
-5. Schließe das Menü und probiere die Fähigkeiten am Tisch aus.
-6. Öffne den Tree und wähle **Testmodus beenden**, um zu deinem echten Spielstand zurückzukehren.
-
-**Wichtig:** Testmodus-Käufe, Einnahmen und neue Bonusmünzen werden **nicht gespeichert**. Wenn du die Seite neu lädst, beginnt automatisch wieder dein echter Spielstand. Während des Testmodus sind Import, Export und Reset gesperrt.
-
-## Hinweise zum Balancing
-
-Die Preisgestaltung ist eine erste, bewusst langfristig angelegte Version. Die genauen Werte stehen in `BALANCING.md`. Bei sehr vielen Münzen werden neue Spawns zur Stabilität auf 500 gleichzeitig vorhandene Bonusmünzen begrenzt; alle vorhandenen Münzen werden weiterhin in jeder Runde geworfen, auch wenn aus Platzgründen nur ein Teil sichtbar ist.
+**Preise und Anforderungen für Freischaltungen bleiben sonst unverändert.**
