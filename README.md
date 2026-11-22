@@ -1,10 +1,9 @@
-# FLIP v0.28
+# FLIP v0.29
 
-**Optik und Animationen**
+- **Münze kehrt sicher zurück:** Rückflug ist zeitlich abgesichert. Unterbrochene Browseranimationen, gesperrte Tabs und JavaScript-Fehler können die Kupfermünze nicht mehr dauerhaft auf dem Spielfeld festhalten. Nach jeder Runde wird die Startposition im `finally`-Block wiederhergestellt.
+- **Ebenen korrigiert:** Die Kupfermünze fliegt vor dem Magneten, aber hinter dem Lampenkörper und dem durchscheinenden Lichtkegel. Licht und Lampe blockieren keine Touch-Eingaben.
+- **Lampe größer und höher positioniert:** Sie sitzt weiter rechts und über dem sichtbaren Tisch; die räumliche Darstellung umfasst einen geschlossenen Schirmkörper, Metallseiten, gerollten Rand, innere Lichtöffnung und Zylinderarme.
+- **Sichtbarer Lichtkegel:** Dünnes, warmes, leicht unscharfes Licht vom Schirm zum exakten bestehenden ×2-Feld. Der Kreis bleibt die Trefferfläche und deren Gameplay ist unverändert.
+- Speichern, Magnet-Freischaltungen, Münzgewinne und übrige Funktionen bleiben kompatibel.
 
-- Der Magnet besteht nun aus einem **durchgehenden, glatten 3D-Körper** mit individuell beleuchteten roten und blauen Lackoberflächen und massiven Metallpolen. Die vielen sichtbaren Schichtlinien sind entfernt. Er bleibt links oben teilweise angeschnitten und behält sämtliche Freischaltungen, Level und Radien.
-- **Dunkler, geheimnisvoller Raum:** dezente Vignette, abgeschwächtes Umgebungslicht und kontrastreiches warmes Licht auf dem Holztisch.
-- Die Tischlampe steht mehr außerhalb des rechten Randes. Ein **sehr dezenter Lichtkegel** verläuft vom Leuchtmittel bis zur vorhandenen ×2-Zone; deren Kreis bildet exakt seinen Boden. Die Trefferlogik wurde nicht verändert.
-- **Geldmünzen verschwinden beim Einsammeln sofort.** Kein kurzer 2D-Zustand durch Schrumpf- oder Drehanimation. Magnet-Einzug verschiebt die äußere Münzposition und verändert den 3D-Körper nicht.
-
-**Installation:** Auf GitHub Pages die bestehende `index.html` ersetzen. Der bisherige Spielstand bleibt kompatibel. Vorher zur Sicherheit exportieren.
+GitHub Pages: Die `index.html` im Repository ersetzen. Vorher optional Spielstand exportieren.

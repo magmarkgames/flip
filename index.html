@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#65412c"><meta name="description" content="FLIP – aus einer Münze entsteht mehr."><title>FLIP – v0.28</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#65412c"><meta name="description" content="FLIP – aus einer Münze entsteht mehr."><title>FLIP – v0.29</title>
 <style>
 :root{color-scheme:dark;--bg:#141619;--panel:#1d2024;--line:#30343a;--muted:#9299a2;--text:#f1f0ed;--gold:#e7b77b;--green:#91c7a5;--blue:#a0bddb;--orange:#f0a56c}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100dvh;-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;color:inherit;touch-action:manipulation}button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}button:disabled{cursor:default}button, .coin{user-select:none}main{width:min(100%,530px);margin:auto;padding:18px 19px calc(84px + env(safe-area-inset-bottom))}header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.brand{font-size:21px;font-weight:850;letter-spacing:6px}.version{font-size:10px;color:var(--muted);letter-spacing:.05em}.icon-button{background:var(--panel);border:1px solid var(--line);border-radius:12px;width:42px;height:42px;display:grid;place-items:center}.icon-button svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.balance{text-align:center;margin:12px 0 19px}.eyebrow{text-transform:uppercase;font-size:10px;letter-spacing:2.1px;color:var(--muted);font-weight:650}.balance strong{display:block;font-size:clamp(33px,9vw,53px);line-height:1.12;color:var(--gold);letter-spacing:-1.8px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.metrics{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:12px 0}.metric{text-align:center;min-width:0}.metric+.metric{border-left:1px solid var(--line)}.metric span{display:block;color:var(--muted);font-size:11px}.metric strong{display:block;font-size:20px;margin:3px 0 0;font-variant-numeric:tabular-nums}.hot{color:var(--orange)}.arena{min-height:252px;display:flex;align-items:center;flex-direction:column;justify-content:center;padding:20px 0 13px;position:relative}.coin-button{padding:0;background:transparent;border:0;border-radius:50%;display:grid;place-items:center;width:164px;height:164px;position:relative;perspective:550px}.coin-button:disabled{opacity:1}.coin{--metal:#c48d61;--light:#f0ca9f;--dark:#835130;--rim:#9a623d;width:143px;height:143px;position:relative;transform-style:preserve-3d;transition:filter .2s;filter:drop-shadow(0 6px 0 var(--rim)) drop-shadow(0 12px 15px #0005)}.face{position:absolute;inset:0;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:linear-gradient(145deg,var(--light),var(--metal) 42%,var(--metal) 72%,var(--rim));border:2px solid var(--light);backface-visibility:hidden;color:var(--dark);box-shadow:inset 0 0 0 5px var(--metal),inset 0 0 0 7px var(--light),inset 0 0 0 9px var(--metal);overflow:hidden}.face:before{content:'';position:absolute;inset:15px;border:1px dashed var(--dark);border-radius:50%;opacity:.45}.face svg{width:54%;height:54%;fill:currentColor;opacity:.88}.face b{font-size:56px;line-height:1;font-weight:850}.face small{font-size:9px;letter-spacing:3px;font-weight:800;margin-top:7px}.tails{transform:rotateX(180deg)}.coin.is-tails{transform:rotateX(180deg)}.coin-button.streak .coin{filter:drop-shadow(0 6px 0 var(--rim)) drop-shadow(0 0 20px #d88b4350)}.coin-button:active:not(:disabled){transform:scale(.97)}.bonus-label{color:var(--muted);font-size:11px;margin:17px 0 9px}.bonuses{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:100%}.bonus-slot{perspective:300px;position:relative}.mini{--metal:#97b2c9;--light:#d6e4ec;--dark:#50677e;--rim:#5b7b95;width:49px;height:49px;filter:drop-shadow(0 3px 0 var(--rim))}.mini .face{border-width:1px;box-shadow:inset 0 0 0 2px var(--metal),inset 0 0 0 3px var(--light)}.mini .face:before{inset:6px}.mini .face b{font-size:24px}.mini .face small{display:none}.bonus-slot.new{animation:spawn .32s ease-out both}.bonus-slot.lost{animation:vanish .28s ease-in both}.bonus-slot.saved:after{content:'✓';position:absolute;right:-4px;top:-7px;color:var(--green);font-size:15px;font-weight:bold}.more{align-self:center;color:var(--muted);font-size:12px}.result{text-align:center;min-height:48px;margin:8px 0 14px}.result strong{display:block;font-size:25px;line-height:1.2;font-variant-numeric:tabular-nums;color:var(--green)}.result strong.neutral{color:var(--muted);font-size:18px}.result p{margin:5px 0 0;color:var(--muted);font-size:12px;line-height:1.4}.flip{width:100%;border:0;border-radius:13px;background:var(--gold);color:#332214;font-size:15px;letter-spacing:3px;font-weight:850;padding:15px;box-shadow:0 3px 0 #9d744b}.flip:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #9d744b}.flip:disabled{opacity:.65}.shop{margin-top:25px}.section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 11px}.section-title h2{font-size:15px;margin:0}.section-title span{font-size:11px;color:var(--muted)}.upgrade{display:grid;grid-template-columns:39px minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:13px;margin-bottom:8px}.upgrade-icon{height:39px;width:39px;border-radius:10px;display:grid;place-items:center;background:#293747;color:var(--blue)}.upgrade-icon svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.upgrade[data-id=survival] .upgrade-icon{background:#293b32;color:var(--green)}.upgrade[data-id=protection] .upgrade-icon{background:#433327;color:var(--orange)}.upgrade h3{font-size:13px;margin:0 0 3px}.upgrade p{font-size:11px;color:var(--muted);margin:0;line-height:1.4}.upgrade .chance{color:var(--text);font-size:12px;font-weight:650;margin-top:4px}.buy{border:1px solid #735638;border-radius:9px;background:#3b2d22;color:var(--gold);padding:10px 8px;font-size:12px;min-width:68px;font-weight:750;font-variant-numeric:tabular-nums}.buy:disabled{border-color:var(--line);background:#25282d;color:#81868d}.locked{padding:11px 4px;font-size:11px;color:var(--muted);display:flex;gap:8px;align-items:center}.locked svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.7}.bottom{position:fixed;bottom:0;left:0;right:0;background:#191c20;border-top:1px solid var(--line);padding:7px 0 calc(7px + env(safe-area-inset-bottom));z-index:5}.nav-inner{margin:auto;max-width:530px;display:flex;justify-content:space-around}.nav{flex:1;background:none;border:0;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11px;padding:6px}.nav svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}.nav.active{color:var(--gold)}.page[hidden]{display:none}.page-title{font-size:25px;margin:20px 0 4px;letter-spacing:-.5px}.sub{margin:0 0 20px;color:var(--muted);font-size:13px}.stat-group{background:var(--panel);border:1px solid var(--line);border-radius:15px;margin-bottom:13px;padding:4px 14px}.stat{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;font-size:13px}.stat+.stat{border-top:1px solid var(--line)}.stat span{color:var(--muted)}.stat strong{font-variant-numeric:tabular-nums;text-align:right;overflow-wrap:anywhere}.settings-btn{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:9px;text-align:left;font-size:14px}.settings-btn.danger{color:#e69b98}.note{font-size:12px;line-height:1.55;color:var(--muted)}.rules{font-size:12px;color:var(--muted);line-height:1.55;border-top:1px solid var(--line);margin-top:17px;padding-top:13px}.rules summary{cursor:pointer;color:var(--text)}.rules p{margin:8px 0}.save-error{color:#f4b49b;font-size:12px;margin:6px 0}.toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%);background:#30363b;color:var(--text);padding:10px 15px;border-radius:10px;font-size:12px;z-index:10;box-shadow:0 4px 24px #0005;max-width:90%;text-align:center}.toast[hidden]{display:none}@keyframes spawn{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}@keyframes vanish{to{opacity:0;transform:scale(.1)}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}@media(max-width:350px){main{padding-left:12px;padding-right:12px}.upgrade{gap:7px;padding:9px}.metric span{font-size:10px}.buy{min-width:60px}}
 
@@ -398,7 +398,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 @media(prefers-reduced-motion:reduce){.tabletop .reward-slot.spawn .reward-coin{animation:none}}
 
 
-/* FLIP v0.28 — oblique wooden desk and the first physical desk upgrade */
+/* FLIP v0.29 — oblique wooden desk and the first physical desk upgrade */
 .room .wall{height:20%;background:radial-gradient(ellipse at 13% 0%,#d5aa7830,transparent 65%),repeating-linear-gradient(92deg,#0000 0 72px,#0000000a 73px 74px),linear-gradient(180deg,#584940,#3a2c27)}
 .room .skirting{top:16.7%;height:1.6%;transform:skewY(1.8deg);transform-origin:left center;box-shadow:0 4px 10px #190e0877}
 .room .desk{top:17.5%;bottom:9%;left:-27%;right:-25%;clip-path:polygon(20% 0,82% 3%,100% 100%,1% 95%);transform:perspective(1050px) rotateZ(-2deg) skewX(-3.6deg);transform-origin:50% 55%;box-shadow:none;background-position:center;background-size:cover;filter:brightness(1.05)}
@@ -445,7 +445,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 @media(prefers-reduced-motion:reduce){.tabletop .reward-slot.magnet-pulled .reward-coin{animation-duration:.01ms!important}}
 
 
-/* FLIP v0.28 — Straight-on, symmetric desk. Only *thickness* is enlarged. */
+/* FLIP v0.29 — Straight-on, symmetric desk. Only *thickness* is enlarged. */
 .room .wall{height:17%;background:radial-gradient(ellipse at 25% 0%,#d5aa7830,transparent 65%),repeating-linear-gradient(90deg,#0000 0 72px,#0000000a 73px 74px),linear-gradient(180deg,#584940,#3a2c27)}
 .room .skirting{top:16.5%;height:1.7%;transform:none;clip-path:none;box-shadow:0 3px 9px #160c086e;background:linear-gradient(180deg,#9b7756 0%,#714c33 28%,#3e281b 72%,#261912)}
 /* The front edge is the actual termination of the tabletop: no skew or rotation. */
@@ -488,7 +488,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 @media(max-width:380px){.tabletop .magnet-device{left:18%;top:16%;width:95px;height:95px}}
 @media(max-height:600px){.room .desk{top:18%;bottom:13%}.room .desk-edge{top:87%;height:7.2%}.room .skirting{top:16.5%}.tabletop .magnet-device{top:19%;width:94px;height:94px}}
 
-/* FLIP v0.28 — A physically projected room/desk. The interactive tabletop stays
+/* FLIP v0.29 — A physically projected room/desk. The interactive tabletop stays
    screen-aligned: no skew in hit targets, physics or heads-up display. */
 .room{perspective:150dvh;perspective-origin:50% 20%;background:radial-gradient(ellipse 86% 75% at 33% 26%,#61534a 0%,#403832 44%,#252321 82%,#171718 100%);}
 .room:before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:linear-gradient(103deg,#e9b57408,transparent 46%,#08070728 98%);}
@@ -531,7 +531,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 @media(max-width:380px){.tabletop .magnet-device{left:23%;top:19%;width:148px;height:140px;}}
 @media(max-height:600px){.room .desk{top:20%;bottom:31.7%}.room .desk-edge{top:86.8%}.room .skirting{top:19.9%}.tabletop .magnet-device{top:21%;width:112px;height:108px;}}
 
-/* FLIP v0.28: all reward coins exist as complete static 3D solids from the first frame.
+/* FLIP v0.29: all reward coins exist as complete static 3D solids from the first frame.
    We DO NOT animate the 3D root, because animation of grouping properties can
    flatten preserve-3d descendants for some mobile compositors. */
 .tabletop .reward-slot .reward-coin,
@@ -582,7 +582,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 @media(max-height:600px){.tabletop .desk-lamp{width:145px;right:-9%;top:-12%;}}
 @media(prefers-reduced-motion:reduce){.tabletop .reward-slot.spawn{animation:none!important}.tabletop .target-device:before{animation:none!important}}
 
-/* FLIP v0.28 — quiet cinematic study: sculpted materials & precisely aligned lamplight. */
+/* FLIP v0.29 — quiet cinematic study: sculpted materials & precisely aligned lamplight. */
 .room{background:radial-gradient(ellipse 80% 50% at 57% 12%,#3c302b 0%,#241d1c 63%,#141414 100%)!important;}
 .room .wall{filter:brightness(.61) saturate(.72);}
 .room .skirting{filter:brightness(.64);}
@@ -612,6 +612,34 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
 @media(max-width:380px){.tabletop .magnet-device{left:17%;top:12.5%;width:190px;height:190px}.tabletop .desk-lamp{right:-27%;top:-13%;width:220px;}}
 @media(max-height:600px){.tabletop .magnet-device{left:18%;top:17%;width:145px;height:145px}.tabletop .desk-lamp{width:166px;right:-19%;top:-19%;}}
 @media(prefers-reduced-motion:reduce){.tabletop .reward-slot.magnet-pulled{animation:none!important;opacity:0;}}
+
+/* v0.29 — correct physical overlap: the coin is in front of the magnet,
+   but the overhead desk lamp and the translucent cone are IN FRONT of the coin.
+   The light overlay doesn't intercept drags and throws. */
+.tabletop .magnet-device{z-index:7!important;}
+.tabletop .coin-stage{z-index:10!important;}
+.tabletop .coin-stage.tossing{z-index:10!important;}
+.tabletop .target-device{z-index:2!important;}
+.tabletop .lamp-light-volume{z-index:12!important;opacity:.98;mix-blend-mode:screen;pointer-events:none;}
+.tabletop .desk-lamp{
+  z-index:16!important;
+  right:-32%!important;
+  top:-23%!important;
+  width:clamp(220px,59vw,275px)!important;
+  filter:drop-shadow(9px 13px 8px #080908bb);
+  pointer-events:none;
+}
+.tabletop .desk-lamp svg{overflow:visible;}
+.tabletop .lamp-light-volume #lampConeBack{opacity:.97;}
+.tabletop .lamp-light-volume #lampConeEdges{stroke-linecap:round;}
+/* The cone and metal shade are elevated, with warm light falling through the
+   full aerial path. No opaque overlay hiding the coin. */
+@media(max-width:380px){
+ .tabletop .desk-lamp{right:-35%!important;top:-22%!important;width:232px!important;}
+}
+@media(max-height:600px){
+ .tabletop .desk-lamp{width:174px!important;right:-24%!important;top:-25%!important;}
+}
 </style>
 </head>
 <body>
@@ -666,35 +694,54 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
   </button>
 <svg class="lamp-light-volume" id="lampLightVolume" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <linearGradient id="lightVolume28" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffebb4" stop-opacity=".095"/><stop offset=".22" stop-color="#ffda91" stop-opacity=".051"/><stop offset=".76" stop-color="#ffd998" stop-opacity=".025"/><stop offset="1" stop-color="#ffe5ae" stop-opacity=".008"/></linearGradient>
-  <linearGradient id="lightStripe28" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff1c8" stop-opacity="0"/><stop offset=".52" stop-color="#ffe6ac" stop-opacity=".036"/><stop offset="1" stop-color="#fff1ca" stop-opacity="0"/></linearGradient>
+  <linearGradient id="lightVolume28" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#fff1c1" stop-opacity=".19"/><stop offset=".19" stop-color="#ffe0a0" stop-opacity=".12"/>
+    <stop offset=".69" stop-color="#f3bd75" stop-opacity=".066"/><stop offset="1" stop-color="#ffe3a6" stop-opacity=".015"/>
+  </linearGradient>
+  <linearGradient id="lightStripe28" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffe9b5" stop-opacity="0"/><stop offset=".42" stop-color="#fff0c3" stop-opacity=".075"/><stop offset=".68" stop-color="#ffe7aa" stop-opacity=".038"/><stop offset="1" stop-color="#ffe1ac" stop-opacity="0"/></linearGradient>
+  <filter id="lampBeamBlur29" x="-35%" y="-35%" width="170%" height="170%"><feGaussianBlur stdDeviation="5.4"/></filter>
 </defs>
+<path id="lampConeGlow" fill="url(#lightVolume28)" filter="url(#lampBeamBlur29)" opacity=".88"/>
 <path id="lampConeBack" fill="url(#lightVolume28)"/>
-<path id="lampConeCore" fill="url(#lightStripe28)"/>
-<path id="lampConeEdges" stroke="#ffeab2" stroke-width=".55" stroke-opacity=".08" fill="none"/>
+<path id="lampConeCore" fill="url(#lightStripe28)" opacity=".88"/>
+<path id="lampConeEdges" stroke="#ffe6ad" stroke-width=".7" stroke-opacity=".125" fill="none"/>
 </svg>
   <div class="desk-lamp" id="deskLamp" aria-hidden="true">
-   <svg viewBox="0 0 230 205" width="100%" height="100%" aria-hidden="true">
+   <svg viewBox="0 0 230 205" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs>
-     <linearGradient id="lampArm27" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4e463b"/><stop offset=".28" stop-color="#d3c3a2"/><stop offset=".53" stop-color="#96836b"/><stop offset="1" stop-color="#3c332d"/></linearGradient>
-     <linearGradient id="lampShade27" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#8d765c"/><stop offset=".13" stop-color="#5b5147"/><stop offset=".54" stop-color="#373731"/><stop offset="1" stop-color="#181c1b"/></linearGradient>
-     <linearGradient id="lampRim27" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff1b8"/><stop offset=".5" stop-color="#d4ac6b"/><stop offset="1" stop-color="#513b2c"/></linearGradient>
-     <radialGradient id="lampBulb27"><stop stop-color="#fff9d7"/><stop offset=".7" stop-color="#ffd999"/><stop offset="1" stop-color="#dfac63"/></radialGradient>
+     <linearGradient id="lampTube29" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#292b2a"/><stop offset=".20" stop-color="#a49a84"/><stop offset=".38" stop-color="#ebe0c2"/><stop offset=".52" stop-color="#a69a7d"/><stop offset=".72" stop-color="#474541"/><stop offset="1" stop-color="#1b2221"/></linearGradient>
+     <linearGradient id="lampShade29" x1="0" y1="0" x2="1" y2=".15"><stop stop-color="#8e8473"/><stop offset=".13" stop-color="#57534c"/><stop offset=".37" stop-color="#313634"/><stop offset=".72" stop-color="#202525"/><stop offset="1" stop-color="#0c1415"/></linearGradient>
+     <linearGradient id="lampSide29" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#242824"/><stop offset=".30" stop-color="#37433d"/><stop offset=".60" stop-color="#151d1d"/><stop offset="1" stop-color="#080e10"/></linearGradient>
+     <linearGradient id="lampLip29" x1="0" y1="0" x2=".1" y2="1"><stop stop-color="#f8d79d"/><stop offset=".20" stop-color="#f2cf8d"/><stop offset=".55" stop-color="#7a5e42"/><stop offset="1" stop-color="#2a2826"/></linearGradient>
+     <radialGradient id="lampInside29" cx=".52" cy=".4" r=".7"><stop stop-color="#fff2cb"/><stop offset=".30" stop-color="#f3c67c"/><stop offset=".65" stop-color="#86623b"/><stop offset="1" stop-color="#211e1c"/></radialGradient>
+     <radialGradient id="lampGlass29" cx=".48" cy=".32" r=".7"><stop stop-color="#fffcee"/><stop offset=".55" stop-color="#ffe3a6"/><stop offset="1" stop-color="#bd9256"/></radialGradient>
     </defs>
-    <ellipse cx="213" cy="83" rx="45" ry="19" fill="#110b09" opacity=".4"/>
-    <ellipse cx="202" cy="76" rx="43" ry="16" fill="url(#lampShade27)" stroke="#b4a181" stroke-width="2"/>
-    <ellipse cx="201" cy="71" rx="27" ry="9" fill="#4f4436" stroke="#b7a78b" stroke-width="1"/>
-    <path d="M198 72L192 23L131 62L112 94" fill="none" stroke="#1b2020" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M198 72L192 23L131 62L112 94" fill="none" stroke="url(#lampArm27)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M198 72L192 23L131 62L112 94" fill="none" stroke="#fff1d5" opacity=".28" stroke-width="1.1" stroke-linecap="round"/>
-    <circle cx="192" cy="23" r="10" fill="#3b342c" stroke="#b1a285" stroke-width="3"/><circle cx="192" cy="23" r="3.4" fill="#e7ceb2"/>
-    <circle cx="131" cy="62" r="9" fill="#383a34" stroke="#a99a81" stroke-width="2.8"/><circle cx="131" cy="62" r="3.2" fill="#dcc2a1"/>
-    <circle cx="112" cy="94" r="7" fill="#42403a" stroke="#b6a080" stroke-width="3"/>
-    <path d="M111 90Q128 94 134 115L138 155Q130 172 111 172L95 168Q115 165 123 157L125 116Q124 96 111 88Z" fill="#171c1c" stroke="#4b4b41" stroke-width="1.6"/><path d="M99 87Q113 83 121 94Q132 102 136 114L138 155Q136 160 133 163" fill="none" stroke="#b0a082" stroke-opacity=".4" stroke-width="2.2"/><path d="M100 87Q80 91 71 117L48 150Q82 174 123 157L125 116Q124 96 111 88Z" fill="url(#lampShade27)" stroke="#a59b83" stroke-width="2.7"/>
-    <path d="M51 147Q83 164 122 155L121 163Q83 181 47 154Z" fill="url(#lampRim27)" stroke="#d5ba90" stroke-width="1.2"/>
-    <path d="M54 155Q87 169 117 157Q99 182 61 164Z" fill="#b7864b" opacity=".8"/>
-    <ellipse id="lampBulb" cx="85" cy="159" rx="21" ry="6.5" transform="rotate(9 85 159)" fill="url(#lampBulb27)" opacity=".95"/>
-    <path d="M61 141Q71 111 88 101" stroke="#d8c5aa" stroke-opacity=".23" stroke-width="3" fill="none"/><path d="M71 100Q85 90 102 97" fill="none" stroke="#d0bba0" opacity=".35" stroke-width="3"/>
+    <!-- Lamp foot and two cylindrical articulated arms; much of the base stays off screen. -->
+    <ellipse cx="212" cy="87" rx="41" ry="14" fill="#0d1010" opacity=".48"/>
+    <path d="M172 75 Q174 61 201 61 Q229 61 242 77 L245 90 Q208 109 173 87Z" fill="#1b2221" stroke="#796f59" stroke-width="1.5"/>
+    <ellipse cx="203" cy="77" rx="43" ry="12" fill="#343d38" stroke="#aa9c7e" stroke-width="2"/>
+    <ellipse cx="205" cy="73" rx="28" ry="6" fill="#545448" stroke="#c7b797" stroke-width=".9"/>
+    <path d="M200 72 L191 21 L130 57 L109 91" fill="none" stroke="#0b1517" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M200 72 L191 21 L130 57 L109 91" fill="none" stroke="url(#lampTube29)" stroke-width="8.4" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M197 69 L189 26 L131 60 L110 89" fill="none" stroke="#fff7dd" opacity=".30" stroke-width="1.4" stroke-linecap="round"/>
+    <circle cx="191" cy="21" r="11.5" fill="#1d2523" stroke="#a6a18b" stroke-width="2.7"/><circle cx="191" cy="21" r="5" fill="#9b947b" stroke="#e4d7b6" stroke-width="1.3"/>
+    <circle cx="130" cy="57" r="10" fill="#1c2422" stroke="#aaa088" stroke-width="2.8"/><circle cx="130" cy="57" r="4" fill="#ad9f82" stroke="#f5e8cd" stroke-width="1"/>
+    <circle cx="109" cy="91" r="8" fill="#192322" stroke="#b4a890" stroke-width="2"/>
+    <!-- Closed solid rear of the tilted bell: top shell extends well behind aperture. -->
+    <path d="M100 85 Q126 84 137 111 Q145 127 149 151 Q150 168 135 180 Q121 185 98 177 L76 170 Q108 168 119 156 L122 117 Q118 96 100 85Z" fill="#080f11" stroke="#404a43" stroke-width="2"/>
+    <path d="M109 86 Q135 92 141 119 L149 150 Q149 166 139 173 L120 176 Q130 157 128 124 Q126 98 109 86Z" fill="url(#lampSide29)" stroke="#777b6c" stroke-width="1.3"/>
+    <path d="M120 95 Q141 113 143 148 Q145 161 138 170" fill="none" stroke="#e0d2a7" stroke-width="2.2" opacity=".38"/>
+    <!-- Front convex curved steel shell with elongated vertical highlight. -->
+    <path d="M101 86 C80 85 66 105 59 119 L43 150 Q75 175 120 158 L124 117 Q122 94 101 86Z" fill="url(#lampShade29)" stroke="#a79a81" stroke-width="2.4"/>
+    <path d="M57 137 C71 106 84 96 104 97" fill="none" stroke="#d8d1b7" stroke-width="3" opacity=".28"/>
+    <path d="M65 122 C78 99 92 93 101 94" fill="none" stroke="#f3e8d1" stroke-width="1.2" opacity=".27"/>
+    <path d="M108 91 C126 106 128 136 119 156" fill="none" stroke="#070e10" opacity=".55" stroke-width="4.5"/>
+    <!-- Aperture is a thick physical opening, not a flat 2D sticker. -->
+    <path d="M43 150 Q77 171 121 158 L123 169 Q91 190 57 171 Q45 165 43 150Z" fill="#1c2526" stroke="#bba481" stroke-width="1.3"/>
+    <path d="M45 151 Q81 167 120 158 Q106 178 77 175 Q56 172 45 151Z" fill="url(#lampInside29)"/>
+    <path d="M45 151 Q78 170 121 158" stroke="url(#lampLip29)" stroke-width="6.8" fill="none" stroke-linecap="round"/>
+    <path d="M48 154 Q78 171 117 162" stroke="#fff1ca" stroke-width="1.7" opacity=".85" fill="none"/>
+    <ellipse id="lampBulb" cx="83" cy="162" rx="17" ry="5.5" transform="rotate(8 83 162)" fill="url(#lampGlass29)"/>
    </svg>
   </div>
  <span id="targetProgress" hidden></span>
@@ -731,7 +778,7 @@ body:not(.subpage) .tabletop .bonus-slot{cursor:grab}#play.round-busy .tabletop,
   <p class="mint-note">Nur Optik: Skins ändern weder Münzwerte noch Wahrscheinlichkeiten. Bonusmünzen behalten vorerst ihre Spielmaterialien. Die Freischaltlogik folgt später.</p>
 </section>
 <section id="stats" class="page" hidden><h1 class="page-title">Statistiken</h1><p class="sub">Jeder Wurf zählt.</p><div id="statContent"></div></section>
-<section id="settings" class="page" hidden><h1 class="page-title">Einstellungen</h1><p class="sub">Dein Spiel, dein Fortschritt.</p><button class="settings-btn" id="toggleSound"></button><button class="settings-btn" id="export">Spielstand exportieren</button><button class="settings-btn" id="import">Spielstand importieren</button><input id="importFile" type="file" accept="application/json,.json" hidden><button class="settings-btn danger" id="reset">Spielstand zurücksetzen</button><p class="note">Der Fortschritt wird automatisch in diesem Browser gespeichert. Beim Wechsel des Geräts oder der Webadresse kannst du deinen exportierten Spielstand importieren. FLIP v0.28 · Räumlicher Schreibtisch · Keine Konten, keine externen Dienste.</p><details class="rules"><summary>So funktioniert FLIP v0.28</summary><p>Berühre die Kupfermünze und schnippe sie in einer kurzen, schnellen Bewegung in Richtung der goldenen ×2-Zone. Halten oder langsames Ziehen zählt nicht. Die Münze kehrt nach dem Wurf an ihren Startpunkt zurück. Krone und Totenkopf bleiben unabhängig von der Wurfstärke 50/50.</p><p>Bei Gewinn erscheinen kleine 3D-Silber- und Goldmünzen auf dem Tisch. Sammle sie durch Antippen oder indem du mit dem Finger über sie streichst. Erst das Einsammeln erhöht dein Guthaben. Die ×2-Zone ist nur wenig größer als die Kupfermünze; sie muss fast vollständig im Kreis landen, um den Bonus zu erhalten.</p><p>Diese Version ist ein Test der Wurf- und Sammelmechanik. Die alten Bonusmünzen-Verbesserungen sind noch im Skill-Tree, wirken aber nicht mehr auf werfbare Bonusmünzen. Bestehende Spielstände bleiben verwendbar.</p></details></section>
+<section id="settings" class="page" hidden><h1 class="page-title">Einstellungen</h1><p class="sub">Dein Spiel, dein Fortschritt.</p><button class="settings-btn" id="toggleSound"></button><button class="settings-btn" id="export">Spielstand exportieren</button><button class="settings-btn" id="import">Spielstand importieren</button><input id="importFile" type="file" accept="application/json,.json" hidden><button class="settings-btn danger" id="reset">Spielstand zurücksetzen</button><p class="note">Der Fortschritt wird automatisch in diesem Browser gespeichert. Beim Wechsel des Geräts oder der Webadresse kannst du deinen exportierten Spielstand importieren. FLIP v0.29 · Räumlicher Schreibtisch · Keine Konten, keine externen Dienste.</p><details class="rules"><summary>So funktioniert FLIP v0.29</summary><p>Berühre die Kupfermünze und schnippe sie in einer kurzen, schnellen Bewegung in Richtung der goldenen ×2-Zone. Halten oder langsames Ziehen zählt nicht. Die Münze kehrt nach dem Wurf an ihren Startpunkt zurück. Krone und Totenkopf bleiben unabhängig von der Wurfstärke 50/50.</p><p>Bei Gewinn erscheinen kleine 3D-Silber- und Goldmünzen auf dem Tisch. Sammle sie durch Antippen oder indem du mit dem Finger über sie streichst. Erst das Einsammeln erhöht dein Guthaben. Die ×2-Zone ist nur wenig größer als die Kupfermünze; sie muss fast vollständig im Kreis landen, um den Bonus zu erhalten.</p><p>Diese Version ist ein Test der Wurf- und Sammelmechanik. Die alten Bonusmünzen-Verbesserungen sind noch im Skill-Tree, wirken aber nicht mehr auf werfbare Bonusmünzen. Bestehende Spielstände bleiben verwendbar.</p></details></section>
 </main>
 <div id="critBanner" class="critical-banner" aria-live="polite" aria-atomic="true" hidden></div><div class="toast" id="toast" role="status" hidden></div>
 <script id="engine">
@@ -1355,6 +1402,7 @@ let lastBoardSize=tabletop.clientWidth+'x'+tabletop.clientHeight;new ResizeObser
     // The cone has a softly curved base; no independent inaccurate target graphic.
     const lift=Math.max(6,r*.34);
     $('lampConeBack').setAttribute('d',`M ${bx.toFixed(1)} ${by.toFixed(1)} L ${(cx-r).toFixed(1)} ${(cy-lift).toFixed(1)} A ${r.toFixed(1)} ${(r*.82).toFixed(1)} 0 1 0 ${(cx+r).toFixed(1)} ${(cy-lift).toFixed(1)} Z`);
+    $('lampConeGlow').setAttribute('d',$('lampConeBack').getAttribute('d'));
     const spread=r*.66;
     $('lampConeCore').setAttribute('d',`M ${bx.toFixed(1)} ${by.toFixed(1)} Q ${(bx+cx-spread)/2} ${(by+cy)/2} ${(cx-spread).toFixed(1)} ${cy.toFixed(1)} L ${(cx+spread).toFixed(1)} ${cy.toFixed(1)} Z`);
     $('lampConeEdges').setAttribute('d',`M ${bx.toFixed(1)} ${by.toFixed(1)} L ${(cx-r).toFixed(1)} ${(cy-lift).toFixed(1)} M ${bx.toFixed(1)} ${by.toFixed(1)} L ${(cx+r).toFixed(1)} ${(cy-lift).toFixed(1)}`);
@@ -1629,13 +1677,31 @@ let lastBoardSize=tabletop.clientWidth+'x'+tabletop.clientHeight;new ResizeObser
     const ms=reduced()?0:Math.round(2500*fastFactor(state));
     const start=startPos(); place(mainSlot,start);
     state.bonus=0; state.bonusCoins=[];
+    // Browser throttling, tab changes or cancelled Web Animations must never
+    // strand the copper coin on the tabletop or leave the round locked.
+    const home=()=>{
+      for(const a of mainSlot.getAnimations({subtree:true}))try{a.cancel();}catch{}
+      mainSlot.classList.remove('tossing');
+      place(mainSlot,start);
+      mainSlot.style.transform='translate(-50%, -50%)';
+    };
+    const bounded=async(promise,timeout)=>{
+      let timer;
+      try{return await Promise.race([promise,new Promise(resolve=>{timer=setTimeout(resolve,timeout);})]);}
+      finally{clearTimeout(timer);}
+    };
+    const watchdog=setTimeout(()=>{
+      // This causes pending .finished promises to resolve via their cancellation
+      // handlers, then the finally block can always put the coin home.
+      for(const a of mainSlot.getAnimations({subtree:true}))try{a.cancel();}catch{}
+    }, Math.max(2300,ms*3+2600));
     let target=aim; if(!target) target={x:clamp(start.x+rand(-90,90), board.main/2+5, board.w-board.main/2-5), y:clamp(start.y-board.h*.33, board.main/2+5, board.h-board.main/2-5), r:board.main/2};
     let heads=[Math.random()<.5];
     try{
       ding(370,.07,.025); tableTap(ms);
-      await toss(mainSlot,heads[0],ms,{x:target.x,y:target.y,r:board.main/2},false,start,power);
+      await bounded(toss(mainSlot,heads[0],ms,{x:target.x,y:target.y,r:board.main/2},false,start,power),ms+850);
       let retried=false;
-      if(secondRoll(state,heads[0])){ retried=true; state.stats.secondChances++; heads[0]=Math.random()<.5; toast('Second Chance!'); ding(950,.12,.035); await toss(mainSlot,heads[0],ms,{x:target.x,y:target.y,r:board.main/2},false,start,power); }
+      if(secondRoll(state,heads[0])){ retried=true; state.stats.secondChances++; heads[0]=Math.random()<.5; toast('Second Chance!'); ding(950,.12,.035); await bounded(toss(mainSlot,heads[0],ms,{x:target.x,y:target.y,r:board.main/2},false,start,power),ms+850); }
       const out=resolveRound(state,heads); state.bonus=0; state.bonusCoins=[]; out.bonuses=[];
       const inZone=isTargetHit(position(mainSlot));
       state.tableTraining.attempts++; if(inZone) state.tableTraining.hits++;
@@ -1649,14 +1715,34 @@ let lastBoardSize=tabletop.clientWidth+'x'+tabletop.clientHeight;new ResizeObser
       save(); renderNumbers(); updateTargetProgress(); renderResult(out.summary); targetFeedback(inZone,winningHit,targetBonus); criticalImpact(out,[]);
       if(!out.summary.critical&&(out.summary.milestone||out.summary.coldMilestone||out.summary.comeback>1)) [660,880,1100].forEach((f,i)=>ding(f,.17,.045,i*.09));
       else if(out.summary.gain) ding(700,.13,.05); else ding(230,.09,.025);
-      await moveSlot(mainSlot,start, reduced()?0:Math.min(680,Math.round(ms*.32)), position(mainSlot));
+      const returnMs=reduced()?0:Math.min(680,Math.round(ms*.32));
+      await bounded(moveSlot(mainSlot,start,returnMs,position(mainSlot)),returnMs+430);
       setAngle(mainSlot,rand(-12,12));
-    }finally{ busy=false; play.classList.remove('round-busy'); button.disabled=false; updateBonusLabel(); if(board.w!==tabletop.clientWidth||board.h!==tabletop.clientHeight) relayout(); }
+    }catch(err){
+      console.error('Münzwurf konnte nicht vollständig abgeschlossen werden:',err);
+      toast('Münze zurückgesetzt · erneut schnippen');
+    }finally{
+      clearTimeout(watchdog);
+      // Always re-seat the solid coin even after an exception or a cancelled
+      // animation. This is intentionally independent of the success path.
+      home();
+      busy=false; play.classList.remove('round-busy'); button.disabled=false;
+      updateBonusLabel();
+      if(board.w!==tabletop.clientWidth||board.h!==tabletop.clientHeight) relayout();
+    }
   };
+
+  document.addEventListener('visibilitychange',()=>{
+    if(!document.hidden||!busy)return;
+    for(const a of mainSlot.getAnimations({subtree:true})){
+      try{a.finish();}catch{try{a.cancel();}catch{}}
+    }
+  });
 
   const oldCanSwipe=canSwipe;
   canSwipe=function(){ return oldCanSwipe() && !document.querySelector('.reward-slot.collecting'); };
 
+  window.addEventListener('pageshow',()=>{if(!busy)renderMagnet();});
   renderBonuses(); renderNumbers(); renderResult(); renderMagnet();
 })();
 </script>
